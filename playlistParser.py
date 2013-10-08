@@ -11,9 +11,10 @@ if not os.path.exists(filename):
 
 class Song:
 	# constructor:
-	def __init__(self, name, artist, label):
+	def __init__(self, name, artist, album, label):
 		self.name = name.rstrip()
 		self.artist = artist.rstrip()
+		self.album = album.rstrip()
 		self.label = label.rstrip()
 
 	def get_name(self):
@@ -21,6 +22,9 @@ class Song:
 
 	def get_artist(self):
 		return self.artist
+
+	def get_album(self):
+		return self.album
 
 	def get_label(self):
 		return self.label
@@ -31,11 +35,14 @@ class Song:
 	def set_artist(self, artist):
 		self.artist = artist.rstrip()
 
+	def set_artist(self, album):
+		self.album = album.rstrip()
+
 	def set_label(self):
 		self.label = label.rstrip()
 
 	def format_output(self):
-		return  ""
+		return  self.get_name() + ", " + self.get_artist() + ", " + self.get_album() + ", " + self.get_label()
 
 
 def parseString(string):
@@ -47,19 +54,22 @@ def parseString(string):
 
 playlist = []
 
-def infoOrg(info[]){
-	
-}
-
+def infoOrg(info):
+	if isinstance(info,list):
+		if len(info) == 9:
+			song = Song(info[5], info[4], info[6], info[7])
+			playlist.append(song)
 
 
 f = open(filename)
 for line in f:
 	lineAsString = line.rstrip()
 	if parseString(lineAsString) is not None:
-		print parseString(lineAsString)
-	else:
-		print "oh no!"
+		infoOrg(parseString(lineAsString))
+
+
+for song in playlist:
+	print song.format_output()
 
  
 f.close()
