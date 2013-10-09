@@ -42,15 +42,17 @@ class Song:
 		self.label = label.rstrip()
 
 	def format_output(self):
-		return  self.get_name() + ", " + self.get_artist() + ", " + self.get_album() + ", " + self.get_label()
+		return  self.get_artist() + " - " + self.get_name() + " - " + self.get_album()
+
+	def format_output_html_table(self):
+		return  "\n\t\t<td>" + self.get_name() + "</td>\n\t\t<td>" + self.get_artist() + "</td>\n\t\t<td>" + self.get_album() + "</td>\n\t\t<td>" + self.get_label() + "</td>"
 
 
 def parseString(string):
 	match = re.findall(r"<td class=\"resultlist\">(.*?)</td>", string)
 	if match is not None:
 		return match
-	else:
-		print "oh boy..."
+
 
 playlist = []
 
@@ -67,9 +69,13 @@ for line in f:
 	if parseString(lineAsString) is not None:
 		infoOrg(parseString(lineAsString))
 
-
 for song in playlist:
-	print song.format_output()
+	print str(playlist.index(song) + 1) + ". " + song.format_output()
+
+# print "<table>"
+# for song in playlist:
+# 	print "\t<tr>" + song.format_output_html_table() + "\n\t</tr>\n"
+# print "</table>"
 
  
 f.close()
