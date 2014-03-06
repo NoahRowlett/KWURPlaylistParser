@@ -1,182 +1,1623 @@
-<!DOCTYPE html>
-	<head>
-		<title = "testing"></title>
-	</head>
-	<body>
-		<table border="1" style="float:left; border='1' cellspacing='10'">
-			<tr>
-				<th>Artist</th>
-				<th>Song</th>
-				<th>Album</th>
-				<th>Label</th>
-			<tr>
-				<td>Long Gone Girl</td>
-				<td>Cale Tyson</td>
-				<td>High On Lonesome</td>
-				<td>s/r</td></tr>
+<html><head><title>The KWUR Playlist Tracker</title>
 
-			<tr>
-				<td>The Turnpike Troubadours</td>
-				<td>Good Lord Lorrie</td>
-				<td>Goodbye Normal Street</td>
-				<td>Bossier City Records</td></tr>
+<style type="text/css">
+td.resultlist { background : white; }
+</style>
+<script>window["_GOOG_TRANS_EXT_VER"] = "1";</script></head>
+<body bgcolor="#eeeeee" style="">
+<table width="100%">
+<tbody><tr>
+<td align="left" width="500" valign="middle">
+<form action="" method="post"><!-- <input type=image width=40 height=40 border=0 src="splotchsmall.gif"> -->
+<a href="/ptracker/index.php"><img border="0" src="ptracker.jpg"></a><a href="/ctracker/index.php"><img border="0" src="sunicron.jpg"></a><a href="/archive/index.php"><img border="0" src="sfuta.png"></a>
+</form>
+</td>
+<td align="left">
+<font face="Helvetica" size="+1"><b>THE</b> <font size="+2"><b>KWUR</b></font> <b>PLAYLIST TRACKER
+: Reports</b></font>
+<br>
+<a href="index.php">Playlist entry</a>
+<a href="report.php">Reports</a>
+<a href="stats.php">Statistics</a>
+</td>
+<td align="left">
+ <iframe name="listeners" src="/current.php" width="200" height="120" align="top" frameborder="0" scrolling="no"> </iframe></td>
+</tr></tbody></table>
+<hr>
+<table><tbody><tr valign="top"><td width="25%"><table border="0" cellspacing="1" cellpadding="1"><tbody><tr><td bgcolor="#777777"><table border="0" cellspacing="0" cellpadding="3"><tbody><tr><td bgcolor="#558855"><font face="Arial, Helvetica" color="#ffffff"><b>New releases report</b></font></td></tr><tr><td bgcolor="#ffffff">
+<form action="" method="post">
+<b>From:</b> <input type="text" size="20" name="startdate" value="1 week ago"><br><b>To:</b> <input type="text" size="20" name="enddate" value="today"><br><b>Genre:</b> <select name="genre"><option>Blues</option>
+<option>Classical</option>
+<option>Dance</option>
+<option>Eclectic</option>
+<option>Experimental</option>
+<option>Folk/Country</option>
+<option>Goth/Industrial</option>
+<option>HipHop</option>
+<option>Jazz</option>
+<option>Local</option>
+<option>Metal</option>
+<option>Punk</option>
+<option>Reggae</option>
+<option>Ska</option>
+<option>Soul/Funk</option>
+<option>Talk</option>
+<option>Unknown</option>
+<option>Wave</option>
+<option>World</option>
+<option selected="">All</option>
+</select>
+<input type="hidden" name="op" value="newreleases"><br><input type="submit" value="Show"></form></td></tr></tbody></table>
+</td></tr></tbody></table>
+</td><td width="50%"><table border="0" cellspacing="1" cellpadding="1"><tbody><tr><td bgcolor="#777777"><table border="0" cellspacing="0" cellpadding="3"><tbody><tr><td bgcolor="#558855"><font face="Arial, Helvetica" color="#ffffff"><b>Show specific playlists</b></font></td></tr><tr><td bgcolor="#ffffff">
+<form action="" method="post"><b>From:</b> <input type="text" size="20" name="startdate" value="1 week ago"><br><b>To:</b> <input type="text" size="20" name="enddate" value="today"><br><b>Show:&nbsp;</b><select name="showid">
+<option value="-1">Select a show....</option>
+<option value="128"> A Jew Named Sue</option>
+<option value="811">"boquiabierto"</option>
+<option value="680">"Orientalism"</option>
+<option value="688">#1 Welcome Ready Set Pizza Double Bros Fun Stuff Hour Alright</option>
+<option value="875">$ House Blessing</option>
+<option value="933">$p!nspiration</option>
+<option value="881">$w@g Mi 0u+</option>
+<option value="770">Δ V(((O)))YΔGE</option>
+<option value="769">3manydjs</option>
+<option value="142">47 Wrestling Robots</option>
+<option value="269">7th Chamber</option>
+<option value="746">A Little Bit Country</option>
+<option value="902">A Study in Cool</option>
+<option value="202">A-OK Soiree</option>
+<option value="433">Acid Rain</option>
+<option value="695">Adam's 100% Natural Good Time Family Band Show</option>
+<option value="205">Adventure Time</option>
+<option value="279">Agrarian Discontent</option>
+<option value="649">Alex &amp; Eve</option>
+<option value="581">Alfred Hip Hop</option>
+<option value="678">all about eve</option>
+<option value="796">All about K-pop</option>
+<option value="814">All Natural Flavor</option>
+<option value="735">All that Kpop and randomness.</option>
+<option value="925">All These Colors Will Change</option>
+<option value="772">All Things True</option>
+<option value="426">Along Came a Band of Whales</option>
+<option value="643">Alter Egos</option>
+<option value="611">Amateur Hour</option>
+<option value="432">An Exaltation of Larks</option>
+<option value="666">Anchor</option>
+<option value="637">And Ampersand Hour</option>
+<option value="505">Anechoic 4</option>
+<option value="918">Anechoic Chamber</option>
+<option value="435">Another Stain on Your White V-Neck</option>
+<option value="784">Anything and Everything All at Once</option>
+<option value="272">AppleJacks</option>
+<option value="318">Arm Your Joy!</option>
+<option value="239">Around the World in 60 Minutes</option>
+<option value="372">Ars Vacvvm</option>
+<option value="329">Attacked by Squirrels</option>
+<option value="926">Audio Job</option>
+<option value="883">Audiophilia</option>
+<option value="694">Auntie Em's Dilemma </option>
+<option value="589">Aurally Pleasing</option>
+<option value="170">automata-poeia</option>
+<option value="242">Avan-tarded</option>
+<option value="644">Average Radio</option>
+<option value="480">Avoid the Noid!</option>
+<option value="187">Awkward Silence</option>
+<option value="634">Bach to the Future</option>
+<option value="751">bACKpACK</option>
+<option value="853">Bad Glass</option>
+<option value="248">Badonkafunk</option>
+<option value="386">BadonkaFunk II</option>
+<option value="612">Balkan Merak</option>
+<option value="659">Bananas in Pajamas</option>
+<option value="714">Bananas In Pajamas 2.0</option>
+<option value="617">Bashful Concussion</option>
+<option value="821">Bat Soup</option>
+<option value="463">Beach Patrol</option>
+<option value="153">Beats, Batidas, and Boom</option>
+<option value="508">Beats, Bops, and Lids</option>
+<option value="451">Bedrock and Bedlam</option>
+<option value="380">Bedroom Air Guitar</option>
+<option value="621">Bedtime Sports with Brad and Brad</option>
+<option value="740">Bedtime Sports with Brad and Brad with Brad and Stats Adam</option>
+<option value="800">Bedtime Sports with Brad and Stats Adam</option>
+<option value="346">Belly of a Whale</option>
+<option value="928">Beneficial Cabbagepatch</option>
+<option value="275">Between the Bars</option>
+<option value="520">Between the Barz</option>
+<option value="717">Beyonce's Baby</option>
+<option value="359">Beyond the Dark Sun</option>
+<option value="756">Biscuit Hammer</option>
+<option value="407">Biscuits on the Brain</option>
+<option value="684">Bitter Tears</option>
+<option value="360">Black Magic Defecation</option>
+<option value="919">Blind Lemon</option>
+<option value="860">Blind Lemon</option>
+<option value="496">Blizzards and Roast Beast</option>
+<option value="862">Blue velvet skies and elysian echoes</option>
+<option value="549">Bones Bugalu</option>
+<option value="466">Bones Bugalu / Antwerp 1935</option>
+<option value="909">boogie chillen 2</option>
+<option value="646">Boogie Chillun'</option>
+<option value="155">Booty Call</option>
+<option value="642">Born On A Train</option>
+<option value="687">Bounce FM</option>
+<option value="494">BPM</option>
+<option value="335">Breakin' Out the Katana</option>
+<option value="716">Bright &amp; Shiny</option>
+<option value="930">Broken Headphones</option>
+<option value="280">Broken Nails</option>
+<option value="536">Bubonic Electronic</option>
+<option value="265">Business Time</option>
+<option value="776">Butt Vibez</option>
+<option value="677">Butts, Big</option>
+<option value="323">Cadenza</option>
+<option value="503">Cannibalus</option>
+<option value="932">Carlotta Valdes Radio</option>
+<option value="743">cats and boots and cats and boots and cats and boots and cats and boots and</option>
+<option value="442">Check Your Settings</option>
+<option value="382">Cheesy on the Outside</option>
+<option value="622">Chillax Central</option>
+<option value="808">Christmas Eve Volume Deux</option>
+<option value="920">Churros con Chaturvedi</option>
+<option value="164">Circadian Rhythms</option>
+<option value="418">Classic or Clunker</option>
+<option value="938">Classygrass and Sassafras</option>
+<option value="781">Closed Captioning</option>
+<option value="826">Clusterfluff</option>
+<option value="523">Coca-Cola Rock and Roll</option>
+<option value="278">Cohabitation</option>
+<option value="733">Community Service Time</option>
+<option value="798">Concert Hall</option>
+<option value="140">Confessions of a Window Cleaner</option>
+<option value="817">Connie's Calamitous Choices</option>
+<option value="754">Coo-Coo-Katchoo</option>
+<option value="375">Cowboys and Indians</option>
+<option value="943">Creature Feature</option>
+<option value="696">Critical Beatdown</option>
+<option value="443">Cthulhu's Alarm Clock</option>
+<option value="353">Cut Your Head In</option>
+<option value="710">Dali's Mustache</option>
+<option value="127">Deep in the Crates of Soul</option>
+<option value="472">Deep-Fried Radio</option>
+<option value="645">Der Pullover Vorstellung </option>
+<option value="650">Disco City</option>
+<option value="888">Disco Manifesto</option>
+<option value="635">Disregard Speakers, Acquire Volume</option>
+<option value="331">Dive Into Venus</option>
+<option value="245">Dividing By Zero Will Get You Nowhere</option>
+<option value="195">DJ in Search of a Show Title</option>
+<option value="370">DJ Invisible Cola Versus the Pop Rock Conspiracy</option>
+<option value="440">DJ Invisible Cola Versus the Pop Rock Conspiracy</option>
+<option value="184">Doc Snock and the Fat Boyz</option>
+<option value="249">Down at the Crossroads</option>
+<option value="293">Drowning Artificial Flowers</option>
+<option value="590">Dubsauce</option>
+<option value="306">Ear Worm Radio</option>
+<option value="273">Earthbound Machine-O</option>
+<option value="185">East by Northwest</option>
+<option value="753">Eclectic Electronic Do It</option>
+<option value="917">Eggshellent</option>
+<option value="172">El Chamo</option>
+<option value="859">Electroconvulsive Therapy</option>
+<option value="785">ElectrOgasm, FY!</option>
+<option value="502">Empirical Alchemy</option>
+<option value="654">Enclave Radio</option>
+<option value="732">English Literature Hour with Dr. Vincent Sherry</option>
+<option value="460">Et Cetera Letter</option>
+<option value="500">Euphonious Gumbo with Ben and Glen</option>
+<option value="183">Everybody Needs an Alibi</option>
+<option value="748">Everything Sunny All the Time Always</option>
+<option value="870">Evil Car</option>
+<option value="439">Fact or Fiction?</option>
+<option value="683">Falconry</option>
+<option value="211">Fat Drummer and The Lanky Lead</option>
+<option value="308">Fat Soul Heroes</option>
+<option value="793">Feathered Beats</option>
+<option value="396">Feature Detector</option>
+<option value="453">Feed Your Head</option>
+<option value="934">Field Notes</option>
+<option value="208">File Under: Easy Listening</option>
+<option value="454">Finally, a Reason to Panic</option>
+<option value="822">Financial News</option>
+<option value="692">Finer Things Club</option>
+<option value="801">Fireside Cats</option>
+<option value="132">First Mate on the Dawn Treader</option>
+<option value="610">First Time Around</option>
+<option value="207">Five and a Half Years of Braces</option>
+<option value="665">Flaming Nunnery</option>
+<option value="941">Flavin Flav</option>
+<option value="824">Flesh Metals: Scenes</option>
+<option value="276">Flock of Architects</option>
+<option value="405">floor is lava</option>
+<option value="777">Floral season</option>
+<option value="628">floral time</option>
+<option value="722">Food Smash Radio</option>
+<option value="913">For Your Health</option>
+<option value="774">Fratabronia</option>
+<option value="137">Free Speech Radio News</option>
+<option value="846">Freeman's Radio</option>
+<option value="679">Fresh Made Pies</option>
+<option value="656">Fresh to Death</option>
+<option value="578">From Rock to Country Blues to Funky</option>
+<option value="758">Full Court Press</option>
+<option value="145">Funtime Radio</option>
+<option value="538">Furby Flashback</option>
+<option value="850">Galactic Vibrations</option>
+<option value="285">Gav's Special Sauce</option>
+<option value="877">Geocentricity</option>
+<option value="348">Get Right Fridays</option>
+<option value="620">Ghettochip Malfunction</option>
+<option value="906">Ghibli's Palace</option>
+<option value="799">Ghost Sounds</option>
+<option value="900">ghosts and feelings </option>
+<option value="545">Global Psychic Jailbreak</option>
+<option value="462">Globetrotter</option>
+<option value="300">Gnat Swarm</option>
+<option value="744">Goats in Pants</option>
+<option value="855">God Killed the Queen</option>
+<option value="377">Goldybox</option>
+<option value="388">golgotha a go-go</option>
+<option value="401">Gone Off the Deep End</option>
+<option value="471">Gouda Radio</option>
+<option value="186">Grandma's Medicine Cabinet</option>
+<option value="431">Greatest Hits</option>
+<option value="899">greed creeps</option>
+<option value="201">Grendel's Basement</option>
+<option value="693">Guess Who's Bach</option>
+<option value="851">Gut Feeling</option>
+<option value="910">HAGS (Have a Good Summer)</option>
+<option value="789">Hair Annihilation</option>
+<option value="281">Hand claps &amp; exlamation points!</option>
+<option value="674">hanimeli</option>
+<option value="358">Hardcore Dancing in the Livingroom</option>
+<option value="615">Harmonium</option>
+<option value="885">Have You Hurd?</option>
+<option value="891">He Said, She Said</option>
+<option value="255">He Says Tomato, She Says Tomato </option>
+<option value="878">He Who Fights Monsters</option>
+<option value="429">Heart Melting Productions</option>
+<option value="935">Hermie and Onion's Idea of Higher Education in the Greater Midwest</option>
+<option value="243">Hey Hey Radio Show</option>
+<option value="301">Hiphoprockstar Radio</option>
+<option value="317">Hippocleides Doesn't Care</option>
+<option value="441">Home Cooked Heartbeats</option>
+<option value="737">Homeless House Party</option>
+<option value="618">Hook, Line and Skinker</option>
+<option value="812">Hot Forge Sunday</option>
+<option value="385">Hot Sauce on a Biscuit</option>
+<option value="543">House Shout Swing Out</option>
+<option value="567">Hurricane Hangover</option>
+<option value="236">Hybrid Vigor</option>
+<option value="246">Hydrogen Jukebox</option>
+<option value="238">I can help you.</option>
+<option value="898">I can't stop crying</option>
+<option value="638">I Love You, Giles Corey</option>
+<option value="927">If You're Feeling Sinister</option>
+<option value="399">Ignatius J. O RLY?</option>
+<option value="341">Illegal Immigration</option>
+<option value="166">illin'</option>
+<option value="702">Immanentizing the Eschaton</option>
+<option value="210">indie lights</option>
+<option value="708">Indifference Radio</option>
+<option value="749">Insomnia</option>
+<option value="234">International Player's Hour</option>
+<option value="326">Introducing the Leopard</option>
+<option value="290">Ironic Bonding</option>
+<option value="516">Irrelephant</option>
+<option value="436">iskender kebap and turkish coffee</option>
+<option value="921">It's So Cold in the DUC</option>
+<option value="159">It's Trudeau!</option>
+<option value="468">Its the World Gone Crazy</option>
+<option value="741">ITZ BLUE IVY TIME NOW</option>
+<option value="901">James Blonde</option>
+<option value="206">Jams Econo</option>
+<option value="130">Japanese Post Rock</option>
+<option value="311">Jazz in the Park</option>
+<option value="759">Jazz in the Round</option>
+<option value="231">Jazz Lounge</option>
+<option value="907">Jazz on Your Face</option>
+<option value="668">Jerod's Jams</option>
+<option value="314">Jew y Gentile</option>
+<option value="763">Jimmy and Jonathan </option>
+<option value="829">Jimmy and Jonathan in the Morning </option>
+<option value="629">JJ-180</option>
+<option value="412">Joose</option>
+<option value="647">Jubilee</option>
+<option value="604">Juicy 'n Seedless</option>
+<option value="368">Jukebox Radio Hour</option>
+<option value="250">just a taste</option>
+<option value="861">Kaity's Show</option>
+<option value="738">Katzenjammer</option>
+<option value="338">Kemper Art Waves</option>
+<option value="792">Kewl Catz Klubb</option>
+<option value="437">Kid Sister Radio</option>
+<option value="397">Kids Like Us</option>
+<option value="613">Killer Kitty Kats</option>
+<option value="711">Kim-Jong Chill</option>
+<option value="869">Kimchi Soup for the Seoul</option>
+<option value="147">Kind of Me</option>
+<option value="653">Kinky Business</option>
+<option value="524">Knights Who Say Ni</option>
+<option value="703">Knitting Knoise</option>
+<option value="699">Krakens in the Crock-Pot</option>
+<option value="574">KWUR Kwuestions (M)</option>
+<option value="337">KWUR Theater of the Air</option>
+<option value="662">Late Night Relaxation</option>
+<option value="876">Lazer Cats Never Nunz</option>
+<option value="828">Lazer Catz Never Nuns</option>
+<option value="867">Leaves of Boogie</option>
+<option value="400">Let's Make Out</option>
+<option value="414">let's parasauropholus</option>
+<option value="825">LibreVox</option>
+<option value="836">Libs'n'Stadt in the Trap</option>
+<option value="747">Lightworks</option>
+<option value="791">Limin' &amp; Vybezin'</option>
+<option value="709">Limin' and Vybezin'</option>
+<option value="831">Literaturnost</option>
+<option value="174">Long Cool Woman in a Tank Top</option>
+<option value="547">Looney Tunes</option>
+<option value="550">Lunchbox Spectacular</option>
+<option value="535">Mackin' Cheese</option>
+<option value="833">Mad Tacos</option>
+<option value="937">Mad Tacos (and other exotic dishes)</option>
+<option value="497">Magic Carpet Ride</option>
+<option value="489">Magic Potion</option>
+<option value="364">Mainland Reef Kit</option>
+<option value="417">Man Dinner</option>
+<option value="355">Marginalia</option>
+<option value="788">Meditations With Your Host</option>
+<option value="203">Meetings</option>
+<option value="838">Meowsic to Your Ears</option>
+<option value="849">Metal and Feelings</option>
+<option value="507">Metalization</option>
+<option value="143">Metallic Eclectica</option>
+<option value="924">Mexican Love Kake </option>
+<option value="270">Midnight Caucus</option>
+<option value="114">Midnight Marauders</option>
+<option value="905">Minor Planets</option>
+<option value="371">Mobius Transmission</option>
+<option value="655">Moist Melodies</option>
+<option value="670">Money House Blessing</option>
+<option value="715">money-house-blessing</option>
+<option value="447">Monkey Bar Radio</option>
+<option value="325">Monkey Business</option>
+<option value="839">Moody's Point</option>
+<option value="863">Moomat Ahiko California</option>
+<option value="786">More Bacon</option>
+<option value="428">More Bounce to the Ounce</option>
+<option value="795">Morton Feldman's Underwear Drawer</option>
+<option value="773">Mothers Against Drivin' Zombified</option>
+<option value="724">Mothers Against Driving Zombified</option>
+<option value="844">Motherz against Driving Zombified</option>
+<option value="820">mr. magorium's soul funk emporium</option>
+<option value="942">Mumbles &amp; Grumbles</option>
+<option value="517">Music for Old People</option>
+<option value="625">Music for Spinsters</option>
+<option value="395">Music Is my HOT HOT SEX</option>
+<option value="157">Musica Esoterica</option>
+<option value="352">My Hero is Steak</option>
+<option value="504">My music, your ears.</option>
+<option value="529">My weekly show</option>
+<option value="705">Named After Alex</option>
+<option value="474">New American Weird</option>
+<option value="336">New Car Smell</option>
+<option value="664">New Manure</option>
+<option value="609">NEW WINE</option>
+<option value="546">Nic Cage Slumber Party</option>
+<option value="596">Night&amp;Day</option>
+<option value="154">nite sweats</option>
+<option value="701">No Musik No Lyfe</option>
+<option value="685">No New Wave No Fun</option>
+<option value="626">No Parents, No Rules!!!</option>
+<option value="136">No Rest for the Wicked</option>
+<option value="444">No Rest for the Wicked II</option>
+<option value="459">No Soap Radio</option>
+<option value="530">Nocturnal Transmission</option>
+<option value="177">Non-Stop Birthday Party</option>
+<option value="415">NoradicalTunes</option>
+<option value="840">Nordic Beats</option>
+<option value="274">Notes From The Underground</option>
+<option value="333">Nothing On But The Radio</option>
+<option value="818">Nuclear Fluff 'n Sundries</option>
+<option value="809">OD Beets</option>
+<option value="806">ODJB</option>
+<option value="413">Of Course Lincoln Had Ears!</option>
+<option value="214">Off The Hook</option>
+<option value="487">Old Dog a Few New Tricks</option>
+<option value="427">Omnivore</option>
+<option value="518">On the Lam</option>
+<option value="579">Onomatopoeia</option>
+<option value="845">Oprah's Favorite Thing</option>
+<option value="165">Origami Llama</option>
+<option value="196">OTHER COUNTRY</option>
+<option value="139">Out of Phase</option>
+<option value="624">Pair Annihilation</option>
+<option value="630">Pamplemoose Parade</option>
+<option value="700">Pancakes for Dinner</option>
+<option value="857">Papa Stalin's Borscht Bus</option>
+<option value="614">Parliament of Owls</option>
+<option value="289">Passenger Side</option>
+<option value="303">PBJ i'm a jellyroll man! (2)</option>
+<option value="304">PBJ i'm a jellyroll man! (3)</option>
+<option value="305">PBJ i'm a jellyroll man! (4)</option>
+<option value="295">PBJ Orange Blossom Special Summer Edition Wahoo!</option>
+<option value="745">Peace, Love &amp; Soul</option>
+<option value="141">Peanut Butter &amp; Jellyroll!</option>
+<option value="212">Pepsi vs. Coke</option>
+<option value="387">Percolator</option>
+<option value="734">Percolator II</option>
+<option value="391">Pheasant Hunting in the Old Country</option>
+<option value="892">Pickle City</option>
+<option value="365">Pink Crustaceans and Good Vibrations</option>
+<option value="691">Pizzalab</option>
+<option value="181">Plastic Fantastic Radio</option>
+<option value="608">Pleasant Living</option>
+<option value="478">Plundering the Kremlin</option>
+<option value="804">Plundering the Kremlin!</option>
+<option value="373">Political Beats</option>
+<option value="455">political discussion</option>
+<option value="790">Polygamist Paratrooper Pilotz</option>
+<option value="588">Polyhymnia</option>
+<option value="874">poop</option>
+<option value="277">Positive Jams</option>
+<option value="780">Post-whatever</option>
+<option value="320">Postmodern Radio</option>
+<option value="783">Power Hour</option>
+<option value="761">Prance With No Pance</option>
+<option value="498">Process</option>
+<option value="367">Pump Up the Volume</option>
+<option value="247">Punctual Crusaders of the World and Beyond</option>
+<option value="619">Purple Train Wreck</option>
+<option value="394">Qat's Qradle</option>
+<option value="182">Quiz Quest</option>
+<option value="193">Radio en Fuego</option>
+<option value="886">Radio for TIGERS</option>
+<option value="420">Raw Meat</option>
+<option value="354">Raw Meat Original</option>
+<option value="493">Raw Meat: the final episode</option>
+<option value="119">Real Horrorshow</option>
+<option value="873">Redio Sound Waves</option>
+<option value="896">Redio Sound Waves.</option>
+<option value="310">Refractory Period</option>
+<option value="161">Restless Leg Syndrome</option>
+<option value="287">Return of the Boom Bap</option>
+<option value="676">Rhomboid Dreamscape</option>
+<option value="188">Rise With a Hop, Relax With the Blues</option>
+<option value="819">Rites After Dawn</option>
+<option value="197">Road Trip Radio</option>
+<option value="254">Robotic Soul</option>
+<option value="262">Rock out with your Docs out</option>
+<option value="584">Rock Revival</option>
+<option value="633">Rock to Country Blues to Funky </option>
+<option value="639">ROFLAARP</option>
+<option value="532">Rough Wakeup</option>
+<option value="586">Roxaboxing</option>
+<option value="389">Rude Italian Hand Gestures</option>
+<option value="264">Rude Italian Hand Gestures (old)</option>
+<option value="163">Rue de Eurotrash</option>
+<option value="156">Running with Safety Scissors</option>
+<option value="667">Rush Hour Radio</option>
+<option value="513">Sababa</option>
+<option value="731">Sababa rrradio</option>
+<option value="736">Sailor's Delight</option>
+<option value="521">Sarah and Yasmin's New Show</option>
+<option value="381">Sasquatch and the Polymorphic Techtonic Super Squid</option>
+<option value="531">Sassafrassery</option>
+<option value="342">Satellite of Love</option>
+<option value="911">SchwartzCenter</option>
+<option value="868">Screeching Quinoa</option>
+<option value="894">Second Best Bed</option>
+<option value="356">Sex in your room is better without you</option>
+<option value="782">Sexy Terrorism</option>
+<option value="192">Shake Yoself</option>
+<option value="199">Shanananigans</option>
+<option value="260">Show Not Found</option>
+<option value="916">Sideways</option>
+<option value="162">silver apples of the moon</option>
+<option value="541">Simple In the Mind</option>
+<option value="133">Sitting Awkwardly At Stoplights</option>
+<option value="467">Sixty Minute Man</option>
+<option value="284">Skaquake</option>
+<option value="392">Sleeping in Space</option>
+<option value="124">Sleeping with the Enemy</option>
+<option value="815">Sloth Party</option>
+<option value="689">Smokers' Lounge</option>
+<option value="256">Smooth Jams &amp; Sports Talk</option>
+<option value="402">Snuffleupagus</option>
+<option value="651">So White...So Funky</option>
+<option value="856">Songs for Bruxists </option>
+<option value="623">Sonic Geometry</option>
+<option value="146">Soul Devotion</option>
+<option value="843">Soul Food, So Good</option>
+<option value="479">Soul Tatties</option>
+<option value="235">Soulful Delivery</option>
+<option value="464">Sound Supremacy</option>
+<option value="357">Soundwich</option>
+<option value="648">Sparkle Motion Commitment</option>
+<option value="539">Speaking Freely With Dennis</option>
+<option value="398">sprocket hole high doubts</option>
+<option value="512">Sprung From Our Loins</option>
+<option value="450">Star Light Zone</option>
+<option value="858">Static Dynamics</option>
+<option value="915">Static Dynamics 2.0</option>
+<option value="117">Steal Steal Ground</option>
+<option value="299">STeeL DJ's</option>
+<option value="657">Stevie Wears Earrings</option>
+<option value="434">Story Corner</option>
+<option value="823">Story Time with Nate</option>
+<option value="719">Straighten Up and Fly Right</option>
+<option value="261">Strange Ways</option>
+<option value="755">Street Cents</option>
+<option value="837">Striped Sweater</option>
+<option value="473">Strobe Light In The Teardrop Galaxy</option>
+<option value="663">Sucker Punch. </option>
+<option value="787">Summer DMT Sessions</option>
+<option value="893">Summer Fun Time</option>
+<option value="369">Sunny Delight</option>
+<option value="726">Surf Party USA</option>
+<option value="866">Suspense!</option>
+<option value="727">Swag. It's 3 O'clock</option>
+<option value="457">Sweet &amp; Sour Radio Hour</option>
+<option value="729">SWEET DRIPS</option>
+<option value="669">Sweet/Sweden Times For All</option>
+<option value="771">SWEETER DRIPS</option>
+<option value="404">Swimming in Radio Waves</option>
+<option value="725">T7-2L</option>
+<option value="491">Tea Time</option>
+<option value="204">Teaching Robots to Love</option>
+<option value="802">Team Rhythmic Gymnastics</option>
+<option value="482">Technical Difficulty</option>
+<option value="438">Teenage Survival Guide</option>
+<option value="223">teitty</option>
+<option value="912">Telesis</option>
+<option value="750">ten-percent-free!</option>
+<option value="832">Texachusetts</option>
+<option value="713">That don' make no sense!</option>
+<option value="757">The 15 Minute Literature Hour</option>
+<option value="419">the 8th light</option>
+<option value="209">The A-Rock-alypse</option>
+<option value="379">The A-Train</option>
+<option value="742">The Abstract Blue</option>
+<option value="423">The Alabaster Altarpiece</option>
+<option value="307">The Armory</option>
+<option value="198">The Awkward Hour</option>
+<option value="884">The Awkward Turtle</option>
+<option value="362">The Banging Groove</option>
+<option value="616">The Basement Scene</option>
+<option value="525">The Batcave</option>
+<option value="486">The BBQ</option>
+<option value="191">The Beats</option>
+<option value="658">The Bed Intruder Show</option>
+<option value="895">The Bee's Sneeze</option>
+<option value="315">The Big O!</option>
+<option value="296">The Blahdidha Hour</option>
+<option value="721">The Booze Cruize</option>
+<option value="889">The Bowtie Brigade</option>
+<option value="739">The Bruised Orange </option>
+<option value="939">The Cab Ride Home</option>
+<option value="816">The Champagne Room</option>
+<option value="134">The Classical Music Clinic</option>
+<option value="244">The Collective You</option>
+<option value="180">The Color Spectrum</option>
+<option value="403">The Copium</option>
+<option value="671">The Cosmic Redundancy II</option>
+<option value="577">The Cosmic Redundancy III</option>
+<option value="778">The Cosmic Redundancy IV</option>
+<option value="871">The Cosmic Redundancy Rides Again!</option>
+<option value="940">The Cut</option>
+<option value="576">The Daly Show</option>
+<option value="424">The Devil's Work</option>
+<option value="240">The Dolphin Show</option>
+<option value="603">The Down Stroke</option>
+<option value="492">The Driving Sun</option>
+<option value="936">The Fabian Society</option>
+<option value="807">The Flat Earth Society</option>
+<option value="324">The Floor is Lava</option>
+<option value="374">The Fountain Pen</option>
+<option value="682">The Fridge</option>
+<option value="190">The Future</option>
+<option value="510">The Galactic Get-Down</option>
+<option value="408">The Garage</option>
+<option value="409">The Garagge</option>
+<option value="410">The Garragge</option>
+<option value="411">The Ggarragge</option>
+<option value="805">The Girls' Room</option>
+<option value="890">The Great Outdoors</option>
+<option value="660">The Gus Bus</option>
+<option value="322">The Harum Scarum Hour</option>
+<option value="297">The Hey Hey Radio Show</option>
+<option value="179">The Honey and Oats Show</option>
+<option value="475">The Hour of Babel</option>
+<option value="641">The Human Noise</option>
+<option value="506">The Jammin' Monster</option>
+<option value="361">The Jesus Loves You Seafood Bar</option>
+<option value="252">The John Mason Variety Hour</option>
+<option value="319">The Judgment Hour</option>
+<option value="406">The Judgment Hour</option>
+<option value="537">The Juice</option>
+<option value="416">The Juice</option>
+<option value="257">The Juicy Brown Hour</option>
+<option value="594">The Jumpoff</option>
+<option value="720">The Lake Isle of Innisfree</option>
+<option value="376">The Life of Birds</option>
+<option value="384">The Lighthouse</option>
+<option value="631">The Limit Does Not Exist!</option>
+<option value="752">The Locker Room</option>
+<option value="481">The Melting Pot</option>
+<option value="263">The Midnight Whoosits</option>
+<option value="340">The Mixed Tape</option>
+<option value="830">The Monotone Hour</option>
+<option value="422">The Necromancer's Jukebox</option>
+<option value="593">The New Generation</option>
+<option value="556">The New Pollution</option>
+<option value="548">The New Way</option>
+<option value="266">The Noblest Savage</option>
+<option value="675">The Notorious Alfred</option>
+<option value="456">The Notorious K.W.U.R.</option>
+<option value="309">the party barge</option>
+<option value="328">The People's Key</option>
+<option value="421">The Pirate Hour</option>
+<option value="363">The Pit</option>
+<option value="797">The Red Coats Are Coming</option>
+<option value="599">The Road</option>
+<option value="321">The Road Home</option>
+<option value="118">The Roux</option>
+<option value="534">The S&amp;M Power Hour</option>
+<option value="286">The Scientific Method</option>
+<option value="485">The Scone</option>
+<option value="430">The Shower Drain</option>
+<option value="138">The Singularity</option>
+<option value="339">The St. Louis Brunch Dispatch</option>
+<option value="681">The Stig's Thoughts</option>
+<option value="775">The Suppository</option>
+<option value="345">The Swing Set</option>
+<option value="232">The Tarnished Legacy of Chester A. Arthur</option>
+<option value="627">The Theme Machine 2.0</option>
+<option value="929">The Traffic and Weather Radio Hour</option>
+<option value="803">The Trillion Dollar Industry</option>
+<option value="544">The Trumpet Call</option>
+<option value="872">The Tube</option>
+<option value="527">The Violence Channel</option>
+<option value="484">The Witching Hour</option>
+<option value="760">The Wooden Shot Glass</option>
+<option value="931">The Word of Moses</option>
+<option value="555">Thematic SOUP: Sounds of Unrestrained Prodigiousness!</option>
+<option value="458">Theme Time Radio with E and O</option>
+<option value="564">Theology and Geometry</option>
+<option value="378">These Boobs Are Made for Walkin'</option>
+<option value="294">They Fight Crime!</option>
+<option value="312">Things About Stuff</option>
+<option value="449">Things that bump at night</option>
+<option value="390">Things That Go Bump in the Night</option>
+<option value="842">Thirsty Boots</option>
+<option value="834">Thom Yorke's Lazy Eye</option>
+<option value="887">Thought Forge Sundae</option>
+<option value="852">ThoughtCrime Spree</option>
+<option value="519">Three Cheers for Cause and Effect</option>
+<option value="848">Three Colors 4</option>
+<option value="291">THUNDERGARMENTS</option>
+<option value="542">Time Warp Again!?!</option>
+<option value="718">Time Well$pent</option>
+<option value="168">Tou Tou Chi</option>
+<option value="383">Transient Pleasures, Drastic Measures</option>
+<option value="465">Transient pleasures, drastic measures</option>
+<option value="528">Trap Talk</option>
+<option value="728">Tree on stilts</option>
+<option value="178">Triple Word Score</option>
+<option value="847">Tripping on Air</option>
+<option value="483">Tropical Beats!</option>
+<option value="779">Try Anything Once</option>
+<option value="347">Tu-O-Tu</option>
+<option value="766">two yards, three lenins</option>
+<option value="316">Umbrella on Thunder Mountain</option>
+<option value="514">Under The Influence</option>
+<option value="640">Ungst_Ungst_</option>
+<option value="344">unhappy birthday party</option>
+<option value="158">Universal Subculture </option>
+<option value="697">Verdi? Schmerdi</option>
+<option value="253">Very Necessary</option>
+<option value="704">Wailing for Wales</option>
+<option value="452">Walking Wall of Beards Inc.</option>
+<option value="914">We Killed The Wiggles</option>
+<option value="169">we will change this name</option>
+<option value="515">We'll Do It Live!!</option>
+<option value="259">We're Talkin' Sports</option>
+<option value="131">Weekly Advice For Your Daily Problems</option>
+<option value="813">Weird Turn Pro</option>
+<option value="425">WELCOME! Ride the Kuanbahn.</option>
+<option value="327">What a Strange Coincidence!</option>
+<option value="810">Where is Donnie?</option>
+<option value="495">Whims and Distractions</option>
+<option value="366">Whiskey &amp; Women</option>
+<option value="854">whistle.clap.stomp</option>
+<option value="922">whistleclapstomp</option>
+<option value="706">Wizard Fight!</option>
+<option value="349">Writing Center</option>
+<option value="730">WU Political Review</option>
+<option value="267">WUPR</option>
+<option value="470">WUPRadio</option>
+<option value="271">Y'all should be dancin'!</option>
+<option value="533">Yeah, But...</option>
+<option value="476">Yellow Beet Jukebox</option>
+<option value="923">Yentl's Lentils</option>
+<option value="767">yerba madre</option>
+<option value="135">Yes, Everybody's Gonna Need A Witness</option>
+<option value="841">You Can't Dance To Calculus</option>
+<option value="661">You, Me and O.G.</option>
+<option value="189">yours truly radio</option>
+<option value="707">Youth Culture</option>
+<option value="908">~*DrEaM cLuB*~</option>
+<option value="216">~~Anonymous Broadcast~~</option>
+</select><br><b>DJ:&nbsp;</b><select name="userid">
+<option value="-1">Select a DJ....</option>
+<option value="466">Secure Shell Daemon  (Secure Shell Daemon)</option>
+<option value="798">Lauren  (Thomas Paine)</option>
+<option value="600">Tem Abraha (Tem)</option>
+<option value="79">Scott Abrahams (iguana)</option>
+<option value="365">Dayo Adesokan (DJ Dayo)</option>
+<option value="321">Ben Adler (badler)</option>
+<option value="134">Nikhil Aggarwal (blueice)</option>
+<option value="661">Ivan Aguirre (Ivan Eusebio)</option>
+<option value="45">Mary Ahmad ()</option>
+<option value="422">Kemi Aladesuyi (Nova)</option>
+<option value="431">Cora Allen ()</option>
+<option value="782">Jamie Allen (Jamie)</option>
+<option value="367">Harry Alper (Harry)</option>
+<option value="458">Tara Alpert (Tara Alpert)</option>
+<option value="240">Canan Altindas (Canan)</option>
+<option value="305">Zach Amittay (Zachlash)</option>
+<option value="282">Natalie Amleshi ()</option>
+<option value="736">Eleni Anas (ln(e))</option>
+<option value="212">Jason Anderson (Coati)</option>
+<option value="36">Rick Andrews (The Moor)</option>
+<option value="253">Chiara Andriole (DJ Juicy Bottom)</option>
+<option value="797">Nick Annin (Benji)</option>
+<option value="237">Nick Apperson (Crack N Jack)</option>
+<option value="613">David Arbit (David)</option>
+<option value="287">Colin Ardern (Colin)</option>
+<option value="739">Stephanie Aria (StephanieA)</option>
+<option value="121">Tanwa Arpornthip (Tanwa)</option>
+<option value="290">Kemper Art Museum ()</option>
+<option value="704">Sarah Aslam (Sarah)</option>
+<option value="418">Sarah Atkin ()</option>
+<option value="726">So Won Bang (anna bang)</option>
+<option value="662">Adam Banker (Adam)</option>
+<option value="328">Grant Barbosa (Peanut Butter Rice)</option>
+<option value="745">Aissatou Barry (Aissberg)</option>
+<option value="424">Leah Barsanti (Leah in the Sky with Diamonds)</option>
+<option value="246">Lauren Barth (Bemis)</option>
+<option value="493">Bradley Baskir (B_Rizzle)</option>
+<option value="807">Dylan Bassett (Lil B 1.0)</option>
+<option value="46">micah bateman ()</option>
+<option value="95">Kara Batterson (DJ Impacted #11)</option>
+<option value="577">Jonathan Bauer (MC J-BAU)</option>
+<option value="521">Jerod  Beck ()</option>
+<option value="103">Miles Bellman (The Conductor)</option>
+<option value="547">Erika Belmont ()</option>
+<option value="405">Justin Bender (Justin Bender)</option>
+<option value="499">Dylan Benkley (Dylan)</option>
+<option value="658">Alex Berger (Bergz)</option>
+<option value="496">Ashleigh Bermudez ()</option>
+<option value="616">Joe Bernardi (Abe)</option>
+<option value="514">Tom Bescherer (DJ DemiQuaver)</option>
+<option value="448">Caleb  Bess (blackmagic)</option>
+<option value="573">Chelsea Bhajan (Chili-bibi)</option>
+<option value="827">Meghana Bhimasani (NSFW)</option>
+<option value="403">John Bick (J-C)</option>
+<option value="387">Tommy Bird (T-Bird)</option>
+<option value="278">Robert Birkenmeier (Robert Birkenmeier)</option>
+<option value="490">Miles Black (Jormungandr)</option>
+<option value="705">Scott Blackwell (Scott)</option>
+<option value="342">Stephi Blank ()</option>
+<option value="628">Nathaniel Blecher (Stretch)</option>
+<option value="531">David Blinn ()</option>
+<option value="820">Roman Blum (romanb)</option>
+<option value="386">Yasmin Boakye (DJ Persephone)</option>
+<option value="825">Anna Boerwinkle (Tweedle Dum)</option>
+<option value="803">Jesse Bogdan (dj JBoggyBog)</option>
+<option value="273">Charles Bohlen (mccheesefreeze)</option>
+<option value="665">Alex Bolinsky (Alex Bolinsky)</option>
+<option value="306">michael bortinger (borty)</option>
+<option value="378">Mickey Bradford (Mickey Ramone)</option>
+<option value="543">Aliza Bran ()</option>
+<option value="540">Mikey Brand (DJ Mikey B.)</option>
+<option value="277">Gabe Brehm (Gabe)</option>
+<option value="402">Ben Bronsther (Ben Miller)</option>
+<option value="792">Iain Brooks (Iain Brooks)</option>
+<option value="444">Royce Brown (Mr. Gatorade)</option>
+<option value="571">Ashley Brown (3 O'clock Swag)</option>
+<option value="740">Emily Brown (ebrown)</option>
+<option value="733">Kjartan Brownell (KJ)</option>
+<option value="607">Jake Bruemmer (gr1zzly be4r)</option>
+<option value="299">Jakob Brugge (DJ Jakob)</option>
+<option value="43">David Brunell-Brutman ()</option>
+<option value="666">Andrew Buckley (chuck l4z3r)</option>
+<option value="336">Alana Burman ( Monocle)</option>
+<option value="485">Caroline Burney ()</option>
+<option value="88">Zoe Burton (DJ Zurton)</option>
+<option value="141">Daniel Burton (DJ Inevitable)</option>
+<option value="640">Abbey Bush (Abb'sTrack)</option>
+<option value="247">KUAN BUTTS (kuanbutts)</option>
+<option value="794">Kenyah Calhoun (Kenyah)</option>
+<option value="388">Matt Callahan (CattMallahan)</option>
+<option value="558">Conor Camp (Cooter)</option>
+<option value="830">Vince Campanale (Vince)</option>
+<option value="638">Max Campbell (knapsackmax)</option>
+<option value="737">Janice Cantieri (JC)</option>
+<option value="19">Claire Caplan (The Dolphin)</option>
+<option value="545">Katherine Carmichael ()</option>
+<option value="182">Abigail Carroll ()</option>
+<option value="475">Lindy Carroll (Cdragon)</option>
+<option value="81">Mark Carter-Piff (Shape)</option>
+<option value="813">Tsz On CHAK (Chak)</option>
+<option value="320">Theresa Chan ()</option>
+<option value="756">Molly Chaney (DJ Molly)</option>
+<option value="563">Ingrid Chang (Ingrid)</option>
+<option value="307">Whit Chapman (DJ Hustlesprouts)</option>
+<option value="364">Noah Charak (Hip-hop-o-potomus)</option>
+<option value="695">Monica Chaturvedi (Monica)</option>
+<option value="170">Makoto Chino (Maknificent)</option>
+<option value="727">serena choi (serena)</option>
+<option value="557">Yash Chopra (Fina Fiend)</option>
+<option value="65">Andrew Chu ()</option>
+<option value="507">Rachel Chung ()</option>
+<option value="355">Sam Clapp ()</option>
+<option value="257">Alex Clark (...)</option>
+<option value="817">Emma Claydon (emma)</option>
+<option value="29">Colin Clune ()</option>
+<option value="223">Stephanie Co (funkalicious)</option>
+<option value="401">Sarah  Cohen (thescone)</option>
+<option value="440">Katherine Cohen (Kate Cohen)</option>
+<option value="655">Talia Cohen ()</option>
+<option value="225">Dan Cooper (Dapper Dan)</option>
+<option value="242">Chloe Cooper ()</option>
+<option value="477">James Cooper (Scratch-N-Sniff)</option>
+<option value="774">Lyall Cooper (Lyall)</option>
+<option value="271">Rohini Coorg (Roh)</option>
+<option value="675">Cody Copp (Cody)</option>
+<option value="34">Matthew Cortner (Metal Master Matt)</option>
+<option value="383">Sean Cotton (Ragin Cajun)</option>
+<option value="270">Doug Cox ()</option>
+<option value="314">Nick Coyle (DJ The Beatles)</option>
+<option value="197">Nicholas Craig (DJ Ridankulous)</option>
+<option value="684">James Cregan (James)</option>
+<option value="1">Kevin Croker (Kid Sparkle)</option>
+<option value="449">Sarah Croop (Hannah Bull)</option>
+<option value="689">Kaity Cullen (Kaity)</option>
+<option value="795">Julia Curbera (julia)</option>
+<option value="241">Matt Curry (ME)</option>
+<option value="680">Grant Curry (Grant)</option>
+<option value="133">Ayal Cusner (DJ Snuffelupagus)</option>
+<option value="143">Kayla Dalle Molle (Kayla Dalle Molle)</option>
+<option value="700">Reed Dalton (Reed)</option>
+<option value="479">Brendan Daly (Daly)</option>
+<option value="57">mark davenport ()</option>
+<option value="785">Aaron Davidoff (APD)</option>
+<option value="228">Owen Davis ()</option>
+<option value="345">Paula Davis (P.dav)</option>
+<option value="617">Brandon Deger (Brandon Deger)</option>
+<option value="778">Jacob DeHovitz (Jacob)</option>
+<option value="572">Deo Deiparine (Deo)</option>
+<option value="463">Lucas Delort (DJ Luke)</option>
+<option value="167">Lee Demertzis (Lee Demertzis)</option>
+<option value="669">Anna Deming (Anna)</option>
+<option value="155">Matt Denny (Rufus)</option>
+<option value="194">Testing Development ((development))</option>
+<option value="462">Sasha Diamond (DJ Squash)</option>
+<option value="559">Gerardo Diaz (Lalo)</option>
+<option value="417">Brandon Diekhoff ()</option>
+<option value="565">Kat Dimmick (Kat)</option>
+<option value="120">Chris Dosmann (Dubious Troubadour)</option>
+<option value="510">Andrew Dowd (DJ RumpusKrunk)</option>
+<option value="108">Felix Dowsley (Felix)</option>
+<option value="779">Teddy Drucker (Teddy Drucker)</option>
+<option value="180">Sara Duff (DJ Duffles)</option>
+<option value="642">Eileen Duffner (Duffsauce)</option>
+<option value="21">Sarah Duve ()</option>
+<option value="114">David Dye (Reverend Dave)</option>
+<option value="808">Patrick Easley (BIGPATTY)</option>
+<option value="74">David Eberlein (Tronic)</option>
+<option value="304">Chloe Edinger (Chloe)</option>
+<option value="275">Makai Edwards (Mr. Biggs)</option>
+<option value="615">Patrick Edwards (Patrick)</option>
+<option value="127">Adam Eggebrecht (DJ Patch)</option>
+<option value="646">Eric Eig ()</option>
+<option value="488">Seth Einbinder ()</option>
+<option value="147">Aaron Ellis (ness)</option>
+<option value="457">Ezinwanne  Emelue (Rosemary Emelue)</option>
+<option value="72">Rachel Epstein (DJ Potential)</option>
+<option value="699">Rebecca Erde (Rebecca)</option>
+<option value="300">Andrew Erhart (DJ Resin)</option>
+<option value="61">Alex Esche (DJ Pancake)</option>
+<option value="40">James Essenberg ()</option>
+<option value="112">Rebecca  Estee (Becca)</option>
+<option value="173">Gavin Estenssoro (kk holiday)</option>
+<option value="361">jacob evans (DJ Hot Sauce)</option>
+<option value="393">ryan fabel (ryanfabel)</option>
+<option value="522">Jessica Fagen (Jessica)</option>
+<option value="226">Greg Faletto (Greg Faletto)</option>
+<option value="772">Serena Fang ()</option>
+<option value="768">Amelia Farley (Flavin Flav)</option>
+<option value="152">Tolu Fashoro (Dr. No)</option>
+<option value="604">Sara  Faxon ()</option>
+<option value="789">Sunny Feinstein (So Fein)</option>
+<option value="653">Madison Felman ()</option>
+<option value="183">Meghan Ference (Sleepy Crumbz)</option>
+<option value="285">Chase Ferree (The Philosopher)</option>
+<option value="39">Stuart Figeroid (casper)</option>
+<option value="316">Alexandra Fine (Afine)</option>
+<option value="400">Alexander Fine (Sweatpants)</option>
+<option value="93">anna finneran (anagram)</option>
+<option value="97">Jake Fisher (Jake)</option>
+<option value="297">Allegra Fisher (dj porkloin)</option>
+<option value="762">Michael Fisher ()</option>
+<option value="781">Alex Flammond (Flame On)</option>
+<option value="481">Stephen Flanagan (DJ Stephen J)</option>
+<option value="376">Brian Flaxman (KWUR Sports)</option>
+<option value="44">Eric Fleischaker ()</option>
+<option value="474">Aaron Fleischauer ()</option>
+<option value="279">Michael  Fletcher ()</option>
+<option value="113">Dan Flowers (DJ Stuff)</option>
+<option value="806">Maxwell Foley (Heironymous Bosch 2005)</option>
+<option value="533">Zachary Foote ()</option>
+<option value="283">Owen Footer (Uhuru Guru)</option>
+<option value="195">katie ford (katydid)</option>
+<option value="724">Elizabeth Ford (Ellie)</option>
+<option value="362">Jackie Fox (jmfox)</option>
+<option value="728">Adrienne Frachtman (Bearly Legal )</option>
+<option value="687">Jordan Frank (Jordan)</option>
+<option value="201">Max Frankel (Max Frankel)</option>
+<option value="538">Ariel Frankel ()</option>
+<option value="588">Dominic Frecentese (Dom)</option>
+<option value="281">Kaitlin Freedman (Kaitlin Freedman)</option>
+<option value="432">Amanda Freedman ()</option>
+<option value="492">Timothy Freeman ()</option>
+<option value="592">Matt Freilich ()</option>
+<option value="608">Richard Friedman (Charizard)</option>
+<option value="784">Steven Friedman (Steven)</option>
+<option value="529">Gavin Frisch ()</option>
+<option value="119">Jonathan Fritz (DJ Fritzafunk)</option>
+<option value="451">Christian Frommelt (Christian)</option>
+<option value="111">Eli Fuchsberg (Short Fuze)</option>
+<option value="748">Frances Fuqua (Frances )</option>
+<option value="396">Eileen G'Sell (E)</option>
+<option value="773">VIctor Gainor ()</option>
+<option value="91">Jake Galgon (DJ David Attenborough)</option>
+<option value="620">Dylan Gallagher (Dylan)</option>
+<option value="464">Marc Gallant (marc)</option>
+<option value="619">Matt Gallop (Matt Gallop)</option>
+<option value="215">Cindy Gao (Cindy Gao)</option>
+<option value="512">Yaqing(Emma) Gao (Emma)</option>
+<option value="427">Lindsay Garbutt ()</option>
+<option value="394">Rafa Garcia Febles (DJ Hang The DJ)</option>
+<option value="238">Willis Garcini (Touchy)</option>
+<option value="338">Danny Gaynor (DG To The Max)</option>
+<option value="712">Xingyi Ge (Xingyi)</option>
+<option value="351">Chris George (DJ Cro)</option>
+<option value="315">Philip Gibbs (Philip Gibbs)</option>
+<option value="230">GNU Girls (Futa)</option>
+<option value="325">Candace Girod (BarbaraJean)</option>
+<option value="472">Christina Giusti (http://www.indexmas.com/glossary/)</option>
+<option value="676">David Gobel (David)</option>
+<option value="177">Bennet Goeckner (DJ Default)</option>
+<option value="787">Luis Goicouria (Big L)</option>
+<option value="498">Brett Goldberg (DJ Training)</option>
+<option value="553">Adam Goldberg (DJ Goldmaster Spinz)</option>
+<option value="542">Ethan Goldstein ()</option>
+<option value="625">Antonya Gonzalez ()</option>
+<option value="673">Charlotte Gordon (Char Char Binx)</option>
+<option value="204">Dani Gorin (dg)</option>
+<option value="713">Andrew Gorman (The GORMANATOR!!)</option>
+<option value="618">Dhruv Goyal (Dhruv Goyal)</option>
+<option value="720">Jimena Gracia (jeemz)</option>
+<option value="140">Annemarie Gray (Annemarie)</option>
+<option value="530">Courtney Gray ()</option>
+<option value="94">Jason Green (Jason)</option>
+<option value="470">Adam Green (Dynasty)</option>
+<option value="645">Georgie Greene (Georgie)</option>
+<option value="329">Joe  Greer ()</option>
+<option value="489">Joshua Greilich (DJ Greenwich)</option>
+<option value="686">Joely Grieff (Joely)</option>
+<option value="802">Alex Griffel ()</option>
+<option value="235">Joshua Gross (Josh)</option>
+<option value="631">Jamie Gross (Jamie)</option>
+<option value="576">Caroline Grossman ()</option>
+<option value="175">Charlotte Grubbs (DJ Black Cat)</option>
+<option value="503">Natalie Grybauskas (Natalie Grybauskas)</option>
+<option value="609">Matthew Guiang (Matt G, Yo)</option>
+<option value="409">Altug Guner (DJ Yo)</option>
+<option value="504">Abhinav Gupta (Beans)</option>
+<option value="829">Sam Hake (Shake)</option>
+<option value="107">Sarah Halbert (The Deputy)</option>
+<option value="80">Sara Hammer (Sara Hammer)</option>
+<option value="706">Sharon Han (Sharon)</option>
+<option value="373">Olivia Harman (Liv)</option>
+<option value="561">Jon Harrell (Loose Toof)</option>
+<option value="189">chris harris (charris)</option>
+<option value="262">Daniel Harris (Danomite)</option>
+<option value="579">Noah Hart ()</option>
+<option value="685">Jessica Hawkins (Mess-ica)</option>
+<option value="467">Liz Hay (Ray Ban)</option>
+<option value="818">Mike Heavner (Mike)</option>
+<option value="55">Pranjal Hegde ()</option>
+<option value="634">Morgan Henry (DJ Morgan)</option>
+<option value="9">Taylor Hermes (Dude of Life)</option>
+<option value="379">Charles Herrera (DJ Bassitone)</option>
+<option value="211">Micah Herstand (micah)</option>
+<option value="123">Kevin  Hess (Kevin Hess)</option>
+<option value="473">Andrew Hess ()</option>
+<option value="731">Claire Heuckeroth (Dirty Hermie)</option>
+<option value="344">Becca Heymann (Bex)</option>
+<option value="327">Hattie Hiler (Geangoddagodda)</option>
+<option value="369">Zachary Hill (DJ Poppinfresh)</option>
+<option value="484">Alice Hintermann ()</option>
+<option value="688">Julia Ho (Julia)</option>
+<option value="16">Jeff Hoffman (DJ Jazzy JHoff)</option>
+<option value="210">Kenny Hofmeister (Kenny)</option>
+<option value="350">Stephen Hogsten (DJ Kno)</option>
+<option value="359">David Hollander-Urbach (DJ Fuzz)</option>
+<option value="746">Kevin Holt (Esq)</option>
+<option value="551">Craig Hoovler ()</option>
+<option value="715">Isaac Howell (Isaac)</option>
+<option value="586">Kaitlin Huennekens (```~~KBABIEEE~~```)</option>
+<option value="755">Lauren Huennekens (DJ Lauren)</option>
+<option value="725">Nicholas Huesemann (N. Scott)</option>
+<option value="130">Oliver  Hulland (Dr Awkward)</option>
+<option value="742">Will Hunersen (Bill)</option>
+<option value="58">Leslie Hunt ()</option>
+<option value="231">Anonymous Individual or Group (Anonymous)</option>
+<option value="340">Maya Ito (Sparkle)</option>
+<option value="308">Mohit Iyyer ()</option>
+<option value="370">Mohit Iyyer (DJ grow n da dark)</option>
+<option value="800">Shilpa Iyyer (DJ Shilps)</option>
+<option value="239">Jordan Jacobs (DJ Sauce)</option>
+<option value="372">Nora Jehle (noradical)</option>
+<option value="126">Alex Jensen (Alex)</option>
+<option value="312">Derrick Jensen (Poopibus)</option>
+<option value="202">Shijing Jia (shijing)</option>
+<option value="292">Xinyun Jiang (Casual Friday)</option>
+<option value="331">brittany johnson ()</option>
+<option value="438">Ann Johnson ()</option>
+<option value="35">Janelle Jones ()</option>
+<option value="117">Amanda Jones (Cpt. Jammerdijank Jenkins)</option>
+<option value="131">Emily Jones ()</option>
+<option value="291">Nathan Jones (Sissy Lomax)</option>
+<option value="497">Rye Jones (ryejones)</option>
+<option value="786">Anna Joo (anna)</option>
+<option value="360">Carleen Kadlec (DJ C-rex)</option>
+<option value="442">Alex Kahn ()</option>
+<option value="52">David Kaminsky ()</option>
+<option value="28">Daniel Kandy ()</option>
+<option value="793">Chiraag Kapadia (Malachite Rhina)</option>
+<option value="590">Max Kapczynski (thefattestman)</option>
+<option value="721">Robert Kapeller (Robert)</option>
+<option value="587">Jonathan Karp (DJ KHALED)</option>
+<option value="753">Zoe Kase (Spleeconomics)</option>
+<option value="555">Adam Kassover (DJ Hammer Don't Hurt 'em)</option>
+<option value="537">Peter Kaufmann (PK)</option>
+<option value="682">Harrison Kay (Harrison)</option>
+<option value="626">Jacob Kayen (Jacob Kayen)</option>
+<option value="313">Lauren  Keblusek (Lauren Keblusek)</option>
+<option value="433">Louis Keene (Saint Louis)</option>
+<option value="41">kristopher kelley ()</option>
+<option value="266">Kevin Kelly (Double K)</option>
+<option value="399">Mary Kenny (MK)</option>
+<option value="569">Abby Kerfoot (Abby)</option>
+<option value="445">Niko Kesten (Niko)</option>
+<option value="214">Monis Khan (LoveJones)</option>
+<option value="263">Derrick Kilgore (Tech Supreme)</option>
+<option value="500">Jeff Killian ()</option>
+<option value="174">Jen Kim ()</option>
+<option value="363">eric kim (eric kim)</option>
+<option value="562">HeeJin  Kim (Alysa)</option>
+<option value="796">Rory King (rory)</option>
+<option value="5">John Klacsmann (Klax)</option>
+<option value="750">Will Klassen (DJ Will)</option>
+<option value="517">Rachel Klopper (Rachel )</option>
+<option value="506">Wei-Yin Ko ()</option>
+<option value="757">Deborah Koh (Deborah)</option>
+<option value="51">Aaron Koppel ()</option>
+<option value="747">Danielle Korman (s&amp;wich)</option>
+<option value="357">Jonathan Kornblau ()</option>
+<option value="404">Ben Kramer (DJ Kramer)</option>
+<option value="144">Alison Kraus (Alison Kraus)</option>
+<option value="554">Philip Kraus (Phluffy-P)</option>
+<option value="96">Maxwell Krem (Maxwell Krem)</option>
+<option value="707">Sophie Krueger (Sophie)</option>
+<option value="77">John Kuelper (Johnny Boy)</option>
+<option value="469">Brandon Kuley (kuleyaid)</option>
+<option value="380">Ken Kumanomido ()</option>
+<option value="332">Lexi Landolt (DJ Foxhole)</option>
+<option value="429">Aviya Lanis ()</option>
+<option value="366">Hematheja Lanka (Shiva)</option>
+<option value="236">Jake Laperruque (Jake)</option>
+<option value="295">Catlyne Lasser (Catlyne )</option>
+<option value="190">Evan Latt (Evan)</option>
+<option value="703">Sam Leder (Sam)</option>
+<option value="193">Erick Lee (Erick Lee)</option>
+<option value="326">Eric Lee (DJ Foot Fetish)</option>
+<option value="276">Tim Lemieux (T-Bone)</option>
+<option value="213">Jeff Lesser (Jeff Lesser)</option>
+<option value="765">Jerik Leung ()</option>
+<option value="232">Zac Levine ()</option>
+<option value="106">Zach Levinson (Brontosaurus)</option>
+<option value="136">emily levitt (bumbles)</option>
+<option value="509">Bradley Lewis (Brad)</option>
+<option value="560">Eden Lewis (Eden)</option>
+<option value="710">TJ Lewis (TJ)</option>
+<option value="734">Solomon Leyba (Boxcutter)</option>
+<option value="788">Andrew Lezia (Big L)</option>
+<option value="227">Kaity Li (Capsrock)</option>
+<option value="333">Julia Li (joooolia)</option>
+<option value="532">Joanne Li ()</option>
+<option value="460">anya liao (anya)</option>
+<option value="644">Leslie Liberman (Libs)</option>
+<option value="648">James Liebenson ()</option>
+<option value="664">Alex Liguori (Alex)</option>
+<option value="437">Lisa Lillie (crusty juggler)</option>
+<option value="597">Ted Lin (DJTED)</option>
+<option value="439">Glen Lindquist ()</option>
+<option value="354">Robert Ling, III ()</option>
+<option value="455">Sophie Lipman (Sophie Lipman)</option>
+<option value="414">Yao Liu (Dynast)</option>
+<option value="599">Danni Liu (Danni)</option>
+<option value="767">Shuyang Liu ()</option>
+<option value="663">Adrienne Lloyd (Adrienne)</option>
+<option value="149">Jessi Long (jessi)</option>
+<option value="698">Patrick Lopatto (Patrick)</option>
+<option value="375">Nicole Lopez (Mumtastic)</option>
+<option value="419">Bianca Lopez (hurdy gurdy)</option>
+<option value="716">Rebecca Lothan (Rebecca)</option>
+<option value="636">Adam Lowenstein (Adam)</option>
+<option value="454">Cord Luehrman (Tipper Gore)</option>
+<option value="48">Will Lukas (Will the Fantastic)</option>
+<option value="352">Alex Luke (Alex the Red)</option>
+<option value="584">Delaney Lundquist (Delaney)</option>
+<option value="790">Jon Luskin (Jon Luskin)</option>
+<option value="421">Cady Lyon ()</option>
+<option value="519">Britney Lyons (Britney)</option>
+<option value="406">Thomas MacDonald (Max Power)</option>
+<option value="763">Nick Machak ()</option>
+<option value="87">Ryan Mackin (DJ Soda)</option>
+<option value="349">Carly MacLeod (Sandbox)</option>
+<option value="583">Quinlan Maggio (Qlander)</option>
+<option value="54">Mansoor Mahmood ()</option>
+<option value="220">Kinsley Makielski (DJ Nogales)</option>
+<option value="815">Anjum Malhotra (Anjum Malhotra)</option>
+<option value="809">Ilan Mandil (Ilan)</option>
+<option value="821">Aviva Mann (Aviva)</option>
+<option value="495">Varun Manohara (Curryinahurry)</option>
+<option value="260">Andrew Mark (Drew M.)</option>
+<option value="254">Jake Marks (Jamie)</option>
+<option value="135">Zak Marmalefsky (Honey Dripper)</option>
+<option value="595">Paul Marsh (DJ Biebs)</option>
+<option value="105">Leah Martin (DJ Hustler)</option>
+<option value="181">Victoria Martin (vicky martini)</option>
+<option value="623">William Matalene (Willyum)</option>
+<option value="520">Rohan Mathur (Rohan)</option>
+<option value="371">Ryan Matos (DJ Cheddar Sphere)</option>
+<option value="729">Mark Matousek (Mark)</option>
+<option value="346">Trevor Mattea (Trevie Trev)</option>
+<option value="465">Cameron Matthews (Cameron Matthews)</option>
+<option value="508">Taylor McCain ()</option>
+<option value="298">Ryan McCombe (DJ Mac)</option>
+<option value="318">Betty McCord (Metal Betty)</option>
+<option value="585">Hanna McCrum (BANANAPHONE)</option>
+<option value="267">Michael McDonald (Crunchwrap)</option>
+<option value="219">Josh McGowan (DJ McG)</option>
+<option value="259">ryan mclaughlin ()</option>
+<option value="217">Ryan McLaughlin (ryan)</option>
+<option value="546">Ian McVicar ()</option>
+<option value="791">Andrew Meepos (DJ AM)</option>
+<option value="199">Zack Meisel (DJ Barefoot)</option>
+<option value="578">Yuwen Memon ()</option>
+<option value="412">Alice Merrill (Quantum Spook)</option>
+<option value="63">Jeremiah  Methven (Jericho)</option>
+<option value="390">Daniel Michon ()</option>
+<option value="515">Corie Miller ()</option>
+<option value="667">Andrew Miller (Andrew)</option>
+<option value="407">Joanna Milner (Joanna)</option>
+<option value="20">Dan Milstein (DJ Tanner)</option>
+<option value="353">Jessi Mischel (Jessi)</option>
+<option value="221">Brian Mita (Meatface)</option>
+<option value="605">Dipika Mohan (DJ Gatsby)</option>
+<option value="198">John  Monnat (John)</option>
+<option value="735">Emily Monnett (EMastaaXtaCee)</option>
+<option value="56">Marissa Montgomery ()</option>
+<option value="142">Lucy Moore (DJ Mastorbilia)</option>
+<option value="23">Dan Morgan ()</option>
+<option value="811">Liz Morgan (Liz)</option>
+<option value="468">Laurel Morris (LORBO THE DESTROYR)</option>
+<option value="337">Zach Moscicki (Sasquatch)</option>
+<option value="766">Jeremy Moses ()</option>
+<option value="206">Gabe Moskoff (Trackstar the DJ)</option>
+<option value="413">Ceci Murray (Cegi)</option>
+<option value="486">Mike Murray ()</option>
+<option value="24">Craig Myers (Hops)</option>
+<option value="534">Neha Nair ()</option>
+<option value="693">Arya Nair (Arya)</option>
+<option value="86">jun nakamura (DJ junbatoon)</option>
+<option value="730">Anagha Narayanan (Bloomin' Onion)</option>
+<option value="627">Daniel Nassim (Techno World Kinda Guy)</option>
+<option value="641">Hanna Newstadt (StadtCity)</option>
+<option value="692">Leah Nordman (Leah)</option>
+<option value="243">Jake Novick (Smooth Jams &amp; Sports Talk)</option>
+<option value="606">Aine O'Connor ()</option>
+<option value="368">Neil O'Kelly (Neil)</option>
+<option value="769">Meghan O'Neill ()</option>
+<option value="98">Ben Oberkfell (ben)</option>
+<option value="660">oih OHIH (hey)</option>
+<option value="37">adam olansky (Adam J)</option>
+<option value="681">Gretchen Oldelm (Gretchen)</option>
+<option value="544">Katie Olson (Ms. Fancy Octopus)</option>
+<option value="783">simon olson (simo)</option>
+<option value="690">Katie Ortman (Katie)</option>
+<option value="145">Greg Osborn (G-reg)</option>
+<option value="156">emily osborn (dj puree)</option>
+<option value="125">Mark Osman (Mark)</option>
+<option value="639">Henry Osman (el chucho)</option>
+<option value="580">Katherine Page ()</option>
+<option value="415">Jeffrey Palmer (J-Palm)</option>
+<option value="711">Trace Palmer (Trace)</option>
+<option value="624">Michael Parker (PrKr)</option>
+<option value="436">Deanna Parrish (DJ Deannimal)</option>
+<option value="303">anna paszkiewicz ()</option>
+<option value="717">Siya Patil (Siya)</option>
+<option value="582">Robbie Pauszek (Robbie)</option>
+<option value="567">Eugenia Paz (Eugenia)</option>
+<option value="637">Suneal Peddada (Sunny P)</option>
+<option value="513">Evan Pellervo (poojasohoni)</option>
+<option value="301">Jeremy Perkins (Jeremy Perkins)</option>
+<option value="70">(DJ) CJ Perretta (DJ CJ)</option>
+<option value="13">LeeAnn Perry (Crvcifix)</option>
+<option value="722">Devan Perry (Devan)</option>
+<option value="548">Michael Peters (MIcheal John Peters)</option>
+<option value="810">Ashley Peterson (Ashley Peterson)</option>
+<option value="176">Tara Pham (DJ You're-Asian?)</option>
+<option value="823">Grant Phillips (shnargnar)</option>
+<option value="635">Tucker Pierce (Dj Tucker)</option>
+<option value="309">Eliot Piering (DJ Biskits)</option>
+<option value="381">Victor Pinedo (DJ Vic)</option>
+<option value="274">Robert Pino (DJ Robair)</option>
+<option value="289">Mariah Pittman (Riri)</option>
+<option value="50">Jack Pitts ()</option>
+<option value="356">Jacob Pleasants (DJ redbeard)</option>
+<option value="17">Vanessa Poon ()</option>
+<option value="456">Alex Poon (DJ Alex Poon)</option>
+<option value="696">Nathan Port (Nathan)</option>
+<option value="824">Landis Powell (Landis)</option>
+<option value="75">Jack Powers (Dr Jacoby)</option>
+<option value="172">Brian Price (DJ Kaos)</option>
+<option value="47">Reserved Programming ()</option>
+<option value="480">Training Programming (Training Programming)</option>
+<option value="296">sarah quatrano (DJ Beefsteak)</option>
+<option value="804">Julianna Rader (Jules)</option>
+<option value="516">Ashok Raife ()</option>
+<option value="814">Will Ralls (DJ Will)</option>
+<option value="744">Sean Ramras (OP)</option>
+<option value="154">Cody Ranaldo (Cody)</option>
+<option value="511">William Ransohoff (McLovin)</option>
+<option value="764">Natalie Rawson ()</option>
+<option value="288">Cecilia Razak ()</option>
+<option value="397">Alison Redden (Easy A)</option>
+<option value="478">Chloe Reibold ()</option>
+<option value="207">Tony Renner (DJ Crumble)</option>
+<option value="482">Patrick Reynolds (DJ Rey)</option>
+<option value="42">David Rheinstrom (The Captain)</option>
+<option value="146">Fady Riad (DJ Cairo)</option>
+<option value="218">Hunter Richards (Robotnik)</option>
+<option value="425">Robbie Richler (Robbie)</option>
+<option value="526">Andrew Ridker (Andrew Ridker)</option>
+<option value="420">chris robards (dj fa-resh)</option>
+<option value="26">Blair Roberts ()</option>
+<option value="339">Jordan Roberts (jordan)</option>
+<option value="564">Cassandra Roberts (Peaches)</option>
+<option value="732">Amanda Rockwell (DJ Mandibles)</option>
+<option value="310">Ben Rodriguez (The Butcher)</option>
+<option value="76">Jessica Rogen (DJ Ssica)</option>
+<option value="261">Chad Rogers (Chad)</option>
+<option value="668">Andrew Rogers (Andrew)</option>
+<option value="749">Logan Rogers (DJ Logan)</option>
+<option value="341">Jeremy Rogoff (Jeremy Rogoff)</option>
+<option value="250">Stanley Rokaw (Deezblo)</option>
+<option value="423">Erin Roper (E Marie)</option>
+<option value="244">Andrew Rosenberg ()</option>
+<option value="549">Lyda Rossi ()</option>
+<option value="391">Alan Rossman ()</option>
+<option value="416">Madeline Rossman (madelinerae)</option>
+<option value="382">Sarah Roth (The Dentist)</option>
+<option value="311">Jeff Rotondo ()</option>
+<option value="566">Noah Rowlett (Noah)</option>
+<option value="816">Federico Rozenberg (Fedfed)</option>
+<option value="568">Alex Rubel (Ted Drewzzz)</option>
+<option value="89">Brent Rubin (DJ Bubba)</option>
+<option value="679">Gabe Rubin (Gabe)</option>
+<option value="115">Jason Ruff (JRuff)</option>
+<option value="591">Blake Rutledge (Blaker Kakers)</option>
+<option value="151">eleanor ryburn (DJ dancing sparrow)</option>
+<option value="280">Bram Sable-Smith (Zodoc Zabledovsky)</option>
+<option value="594">Varun Sablok (dj vizzle)</option>
+<option value="461">Rachel Sacks (DJ Sassy Pants)</option>
+<option value="525">Julie Safferstein ()</option>
+<option value="459">Mia Salamone (Mia)</option>
+<option value="683">Jake Salzer (Kid Negative)</option>
+<option value="826">Nicola Salzman (tweedle dee)</option>
+<option value="701">Rohan Samarth (Rohan)</option>
+<option value="694">Max Sanders (Max)</option>
+<option value="8">Michael Sandler (Brother Rabbit)</option>
+<option value="502">Erica Sandrock ()</option>
+<option value="148">Stefan Santiago (Stigorio)</option>
+<option value="812">MaryClaire Sarafianos (mc)</option>
+<option value="10">Yoni Sarason (lil Homie Yoni)</option>
+<option value="358">Emre Sarbak (DJ with a funny accent)</option>
+<option value="255">Sam Savage (slick slav)</option>
+<option value="491">Brett Savaglio ()</option>
+<option value="671">Becky Savitt (Becky)</option>
+<option value="269">Marc Savoie (marc savoie)</option>
+<option value="104">Geoffrey Schaefer (Metal Geoff)</option>
+<option value="6">David Schainker (The Head Tantric Engineer)</option>
+<option value="264">Meredith Schlacter ()</option>
+<option value="200">Jake Schneider (Jake)</option>
+<option value="12">Andrew  Schneiderman (DJ HammerThumbs)</option>
+<option value="494">Rachael Schultz (Rachael Schultz)</option>
+<option value="771">Zack Schultz (DJ Blue Z)</option>
+<option value="672">Ben Schwartz (Ben)</option>
+<option value="743">Danny Schwartz (Da Schwartz)</option>
+<option value="702">Rory Scothorne (Rory)</option>
+<option value="118">Kiernan Scrima (kiernan)</option>
+<option value="754">afua sefa (afua)</option>
+<option value="110">Jeff Segal (Jeff)</option>
+<option value="471">Eve Sembler (E.V. On The Radio)</option>
+<option value="208">Andrew  Senter (52nd Center)</option>
+<option value="347">gregory sergay (DJ Downunder)</option>
+<option value="319">Nicole Serize ()</option>
+<option value="443">Nicholas Sewitz (MFB)</option>
+<option value="109">Stephen Shapiro (stephen shapiro)</option>
+<option value="614">Sam Shapiro (Sam)</option>
+<option value="90">Katie Shen (DJ Asta)</option>
+<option value="38">Mike Sher ()</option>
+<option value="203">Mindy Sher (Mindy Sher)</option>
+<option value="550">Madeleine Sher ()</option>
+<option value="610">Sam Shields (Sammy Shields)</option>
+<option value="691">Katie Shin (Daughter Blade)</option>
+<option value="647">Rohan Shirali (rohan the warrior)</option>
+<option value="719">trouble shoot (The $kipper)</option>
+<option value="129">Julie Shore ()</option>
+<option value="374">Molly Sievert (Jackie Jormp-Jomp)</option>
+<option value="169">Avi Silber (DJ Fourfather)</option>
+<option value="122">Steven Silverman (Steven)</option>
+<option value="73">Melissa Simkovic (Melissa)</option>
+<option value="697">Olivia Simon (Olivia)</option>
+<option value="741">Teddy Sims (Ted)</option>
+<option value="83">Jana Singer (dr. glo)</option>
+<option value="483">Taryn Sirias (Taryn)</option>
+<option value="450">Eric Sitterley ()</option>
+<option value="819">Sai Sivapalan (Sai)</option>
+<option value="30">Steven Sklar ()</option>
+<option value="612">Jared Skoff (Sweetback)</option>
+<option value="85">Gabriel Slavitt (blind tiger)</option>
+<option value="31">Jen Slesinger ()</option>
+<option value="323">Aeron Small (smalls)</option>
+<option value="248">Evan Smith (DJ 123)</option>
+<option value="395">Jillian Smith (Jazzy J)</option>
+<option value="656">Josalynn Smith (Cracker Jax)</option>
+<option value="408">Ezra Smyser ()</option>
+<option value="410">Justin Snitka (3Dog)</option>
+<option value="650">Braham Snyder ()</option>
+<option value="384">Pooja Sohoni ()</option>
+<option value="302">Isaiah Sommers ()</option>
+<option value="633">Anastasia Sorokina (RUSSIA)</option>
+<option value="446">Suzie Specker (suzziZzle)</option>
+<option value="324">Nick Speiser (the country bandit)</option>
+<option value="822">Matt Speizman (Matt)</option>
+<option value="670">Arvind Srinivasan (Arvind)</option>
+<option value="385">Anna Stalker (DJ Monster Truck)</option>
+<option value="62">Sarah Starr ()</option>
+<option value="32">Kristen Stegemoeller ()</option>
+<option value="528">Jared Stein (blair II )</option>
+<option value="435">Ben Steinberg (Ben)</option>
+<option value="677">Don Steinburk (Don)</option>
+<option value="196">Annie Stephens (Annie Banannie)</option>
+<option value="752">Carla Steppan (DJ Carla)</option>
+<option value="252">Jacob Stern (beach music)</option>
+<option value="233">Thomas Stevens (Thomas Stevens)</option>
+<option value="601">James Stillson (jimmy)</option>
+<option value="102">Christian Storm (dj storm)</option>
+<option value="258">Matthew Story (The Priest)</option>
+<option value="630">Chantal Strasburger (Chantagold)</option>
+<option value="84">Katie Strauss (dr. glow)</option>
+<option value="49">Justin Strohm ()</option>
+<option value="654">Isaias Suarez (DJ idklol)</option>
+<option value="523">Dean Sudarsky (Automatic Slim)</option>
+<option value="14">Dylan Suher ()</option>
+<option value="452">Sam Sullivan (Sam Sullivan)</option>
+<option value="541">Leah Sutton (leah)</option>
+<option value="434">Sara Suzuki (Cournalie)</option>
+<option value="539">William Swanson (Puppet)</option>
+<option value="234">Dennis Sweeney (Feely)</option>
+<option value="157">Jordan Swensson (SportsGuy)</option>
+<option value="799">Laken Sylvander (Alexander Hamilton)</option>
+<option value="602">Rosie Talcott ()</option>
+<option value="535">Andrew Taliaferro ()</option>
+<option value="593">Zachary Tan ()</option>
+<option value="527">blair tanenbaum (blair)</option>
+<option value="501">Lucas Tcheyan (lucas)</option>
+<option value="581">Rachael Tellerman (Rachael )</option>
+<option value="447">Max Temescu (Max Temescu)</option>
+<option value="317">Alex Terrono (Alex Terrono)</option>
+<option value="652">Alexander Tettenhorst (Night Wizard)</option>
+<option value="760">ryan thier ()</option>
+<option value="178">Anca Timofte (Dj Elena)</option>
+<option value="611">Shira Toister (Shira Toister)</option>
+<option value="428">Hana Toribara (hana.toribara)</option>
+<option value="643">Yvonne Tran (Eva)</option>
+<option value="294">Amy Trummer (DJ Farm'n'fleet)</option>
+<option value="622">Gwen Unger (Gwunga)</option>
+<option value="348">Matt Vail (Matt Vail)</option>
+<option value="171">Victor van den Bergh (DJ Deernoff)</option>
+<option value="629">Chelsea Velaga (PompousBeats)</option>
+<option value="453">Sophia Veltrop (DJ Cricket)</option>
+<option value="714">Anya Venezia (Anya)</option>
+<option value="377">Philip Voron (Snowman)</option>
+<option value="775">Jon Vuylsteke (veejay)</option>
+<option value="293">Lindsey Waldenberg (Cougar)</option>
+<option value="738">JP Waldron (JP)</option>
+<option value="15">Cecilia Wang ()</option>
+<option value="138">Karen  Wang (DJ Wang)</option>
+<option value="168">Andrew Warshauer ()</option>
+<option value="268">Karl Wassmann (Invisible Cola)</option>
+<option value="524">Alex Waters ()</option>
+<option value="632">Trey Weaver ()</option>
+<option value="805">Ellen Weinheimer (Ellen)</option>
+<option value="33">Elizabeth Weinstein ()</option>
+<option value="708">Sydney Weinstock (Squid and the Kid)</option>
+<option value="7">Julia Weissman ()</option>
+<option value="570">Maddie Wells (Maddie)</option>
+<option value="718">Shannon Welsh (Shannon)</option>
+<option value="709">Teddy Wenneker (Teddy)</option>
+<option value="153">Joshua Werth (Mr. Teeny)</option>
+<option value="621">Keaton Wetzel (Keaton)</option>
+<option value="575">Adrienne White ()</option>
+<option value="116">Rebecca Widzer (Beckface at Large)</option>
+<option value="603">Tom Wilkinson (Turnip)</option>
+<option value="22">Turner Williams (Seldom Leo Batfish)</option>
+<option value="64">Hugh Williams ()</option>
+<option value="398">Jessica Williams (DJ Goose Egg)</option>
+<option value="801">Samuel Williams (Sammy C)</option>
+<option value="335">Kate Williamson (Kate Williamson)</option>
+<option value="265">Andy Wilson ()</option>
+<option value="284">Michael Winek (dj glitch)</option>
+<option value="441">Harry Winkler ()</option>
+<option value="11">Paul  Winters ()</option>
+<option value="411">Rici Wittkugel (Sheep Hands)</option>
+<option value="334">Taylor Woodroof (Col. Mustard)</option>
+<option value="256">Hannah Wroblewski (Hannah)</option>
+<option value="589">David Wu (Jabes)</option>
+<option value="505">Graham Wyly (DJ Kid A)</option>
+<option value="780">Tina Xiang (teeenzz)</option>
+<option value="674">Cherry Xie (Cherry)</option>
+<option value="596">Donny Yang (Lil Young Donald)</option>
+<option value="222">Amanda Yates (holy matrimony)</option>
+<option value="651">Tyler Yates (TJ)</option>
+<option value="657">Susie Ye (Sushi)</option>
+<option value="25">George Yeh (George Yeh)</option>
+<option value="556">Trish Yeh (Trish)</option>
+<option value="426">Isaiah Yehros ()</option>
+<option value="249">Jeff York ()</option>
+<option value="649">Richard Yu ()</option>
+<option value="828">katie yun (double rainbow)</option>
+<option value="761">Luke Yurkoski ()</option>
+<option value="598">Abid Zaidi (Abid)</option>
+<option value="723">Nicola Zanchi (NOLA)</option>
+<option value="518">Chris Zarins (cz)</option>
+<option value="552">Talya Zax (The Colfax Kid)</option>
+<option value="224">Zack Zeidman (unknown)</option>
+<option value="99">Dave Zeigler (Captain Sly)</option>
+<option value="330">Rachel Zemke ()</option>
+<option value="777">Ben Zeno (zenny b)</option>
+<option value="78">richard zernickow (dj jimbo)</option>
+<option value="272">Jing Zhang (Robin Sparkles)</option>
+<option value="476">Shuo Zhang (Echo)</option>
+<option value="659">Lijiao Zhang (Pretty Kitty)</option>
+<option value="678">Ellisa Zhang (Ellisa)</option>
+<option value="770">Yiran Zhang (the Sunbathing Whale)</option>
+<option value="27">Yin Zheng ()</option>
+<option value="389">Evan Zheng (Evan)</option>
+<option value="286">Qingran Zhong (lollipop)</option>
+<option value="776">Calla Zhou (ayyy calla)</option>
+<option value="100">Todd Zimmer (DJ Skratch N' Sniff)</option>
+<option value="132">Bob Zimmermann (Niji Babulu)</option>
+<option value="536">Kylie Ziolkowski ()</option>
+<option value="487">Jordan Zipkin ()</option>
+<option value="150">Max Zuckerman (DJ mordechai)</option>
+</select><input type="hidden" name="op" value="shows"><br><br><input type="submit" value="Show"></form></td></tr></tbody></table>
+</td></tr></tbody></table>
+</td><td width="25%"><table border="0" cellspacing="1" cellpadding="1"><tbody><tr><td bgcolor="#777777"><table border="0" cellspacing="0" cellpadding="3"><tbody><tr><td bgcolor="#558855"><font face="Arial, Helvetica" color="#ffffff"><b>Search everything</b></font></td></tr><tr><td bgcolor="#ffffff">
+<form action="" method="post">	  Lower bound date: <input name="lbdate" value="last month"><br>
+Artist: <input name="fields[artist]"><br>
+	    Song: <input name="fields[song]"><br>
+Album: <input name="fields[album]"><br>
+Genre: <select name="fields[genre]"><option selected=""></option>
+<option>Blues</option>
+<option>Classical</option>
+<option>Dance</option>
+<option>Eclectic</option>
+<option>Experimental</option>
+<option>Folk/Country</option>
+<option>Goth/Industrial</option>
+<option>HipHop</option>
+<option>Jazz</option>
+<option>Local</option>
+<option>Metal</option>
+<option>Punk</option>
+<option>Reggae</option>
+<option>Ska</option>
+<option>Soul/Funk</option>
+<option>Talk</option>
+<option>Unknown</option>
+<option>Wave</option>
+<option>World</option>
+</select>
+NR: <input name="fields[nr]" size="5">
+<br><input type="hidden" name="op" value="search">
+<input type="hidden" name="pagenum" value="0">
+<input type="submit" value="Search">
+</form>
 
-			<tr>
-				<td>Katherine Belle</td>
-				<td>American Aquarium</td>
-				<td>Dances for the Lonely</td>
-				<td>Last Chance Records</td></tr>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+</td></tr></tbody></table><hr><table border="0" cellspacing="1" cellpadding="1"><tbody><tr><td bgcolor="#777777"><table border="0" cellspacing="0" cellpadding="3"><tbody><tr><td bgcolor="#558855"><font face="Arial, Helvetica" color="#ffffff"><b>Playlist of <a href="../ctracker/showadmin.php?fxn=showView&amp;showid=739">The Bruised Orange </a>: 2013-11-15 20:01:01 to 2013-11-15 22:01:34</b></font></td></tr><tr><td bgcolor="#ffffff">
+<table border="0" cellspacing="1" cellpadding="1"><tbody><tr><td bgcolor="#777777"><table border="0" cellspacing="0" cellpadding="3"><tbody><tr><td bgcolor="#558855"><font face="Arial, Helvetica" color="#ffffff"><b>Housekeeping</b></font></td></tr><tr><td bgcolor="#ffffff">
+<table><tbody><tr><td valign="top"><b>Station ID:</b> <table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td bgcolor="#909090"><table border="0" cellpadding="2" cellspacing="1"><tbody><tr><td height="16" valign="middle" class="resultlist"><table border="0" cellspacing="0" cellpadding="0"><tbody><tr><td><form action="" method="post"><input type="hidden" name="op" value="killrecord"><input type="hidden" name="id" value="752279"><input type="image" src="killrecord.jpg" width="16" height="16"></form></td></tr></tbody></table>
+</td><td class="resultlist">2013-11-15 20:01:36</td></tr><tr><td height="16" valign="middle" class="resultlist"><table border="0" cellspacing="0" cellpadding="0"><tbody><tr><td><form action="" method="post"><input type="hidden" name="op" value="killrecord"><input type="hidden" name="id" value="752283"><input type="image" src="killrecord.jpg" width="16" height="16"></form></td></tr></tbody></table>
+</td><td class="resultlist">2013-11-15 20:20:05</td></tr><tr><td height="16" valign="middle" class="resultlist"><table border="0" cellspacing="0" cellpadding="0"><tbody><tr><td><form action="" method="post"><input type="hidden" name="op" value="killrecord"><input type="hidden" name="id" value="752311"><input type="image" src="killrecord.jpg" width="16" height="16"></form></td></tr></tbody></table>
+</td><td class="resultlist">2013-11-15 21:01:58</td></tr><tr><td height="16" valign="middle" class="resultlist"><table border="0" cellspacing="0" cellpadding="0"><tbody><tr><td><form action="" method="post"><input type="hidden" name="op" value="killrecord"><input type="hidden" name="id" value="752305"><input type="image" src="killrecord.jpg" width="16" height="16"></form></td></tr></tbody></table>
+</td><td class="resultlist">2013-11-15 21:25:59</td></tr><tr><td height="16" valign="middle" class="resultlist"><table border="0" cellspacing="0" cellpadding="0"><tbody><tr><td><form action="" method="post"><input type="hidden" name="op" value="killrecord"><input type="hidden" name="id" value="752318"><input type="image" src="killrecord.jpg" width="16" height="16"></form></td></tr></tbody></table>
+</td><td class="resultlist">2013-11-15 21:56:47</td></tr></tbody></table></td></tr></tbody></table></td><td valign="top"><b>PSA:</b> <table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td bgcolor="#909090"><table border="0" cellpadding="2" cellspacing="1"><tbody><tr><td height="16" valign="middle" class="resultlist"><table border="0" cellspacing="0" cellpadding="0"><tbody><tr><td><form action="" method="post"><input type="hidden" name="op" value="killrecord"><input type="hidden" name="id" value="752287"><input type="image" src="killrecord.jpg" width="16" height="16"></form></td></tr></tbody></table>
+</td><td class="resultlist">2013-11-15 20:22:00</td></tr><tr><td height="16" valign="middle" class="resultlist"><table border="0" cellspacing="0" cellpadding="0"><tbody><tr><td><form action="" method="post"><input type="hidden" name="op" value="killrecord"><input type="hidden" name="id" value="752313"><input type="image" src="killrecord.jpg" width="16" height="16"></form></td></tr></tbody></table>
+</td><td class="resultlist">2013-11-15 20:43:03</td></tr><tr><td height="16" valign="middle" class="resultlist"><table border="0" cellspacing="0" cellpadding="0"><tbody><tr><td><form action="" method="post"><input type="hidden" name="op" value="killrecord"><input type="hidden" name="id" value="752307"><input type="image" src="killrecord.jpg" width="16" height="16"></form></td></tr></tbody></table>
+</td><td class="resultlist">2013-11-15 21:26:06</td></tr><tr><td height="16" valign="middle" class="resultlist"><table border="0" cellspacing="0" cellpadding="0"><tbody><tr><td><form action="" method="post"><input type="hidden" name="op" value="killrecord"><input type="hidden" name="id" value="752320"><input type="image" src="killrecord.jpg" width="16" height="16"></form></td></tr></tbody></table>
+</td><td class="resultlist">2013-11-15 21:59:05</td></tr></tbody></table></td></tr></tbody></table></td><td valign="top"><b>Disclaimer:</b> <table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td bgcolor="#909090"><table border="0" cellpadding="2" cellspacing="1"></table></td></tr></tbody></table></td><td valign="top"><b>Underwriting:</b> <table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td bgcolor="#909090"><table border="0" cellpadding="2" cellspacing="1"></table></td></tr></tbody></table></td><td valign="top"><b>Community Announcement:</b> <table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td bgcolor="#909090"><table border="0" cellpadding="2" cellspacing="1"></table></td></tr></tbody></table></td><td valign="top"></td></tr></tbody></table><p></p></td></tr></tbody></table>
+</td></tr></tbody></table>
+<table border="0" cellspacing="1" cellpadding="1"><tbody><tr><td bgcolor="#777777"><table border="0" cellspacing="0" cellpadding="3"><tbody><tr><td bgcolor="#558855"><font face="Arial, Helvetica" color="#ffffff"><b>Playlist</b></font></td></tr><tr><td bgcolor="#ffffff">
+<table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td bgcolor="#909090"><table border="0" cellpadding="2" cellspacing="1"><tbody><tr><td height="16" class="resultlist"></td><td height="16" class="resultlist"><b>r</b></td><td height="16" class="resultlist"><b>nr</b></td><td height="16" class="resultlist"><b>va</b></td><td height="16" class="resultlist"><b>date</b></td><td height="16" class="resultlist"><b>artist</b></td><td height="16" class="resultlist"><b>song</b></td><td height="16" class="resultlist"><b>album</b></td><td height="16" class="resultlist"><b>recordlabel</b></td><td height="16" class="resultlist"><b>genre</b></td></tr><tr><td height="16" valign="middle" class="resultlist"><table border="0" cellspacing="0" cellpadding="0"><tbody><tr><td><form action="" method="post"><input type="hidden" name="op" value="editsongrecord"><input type="hidden" name="id" value="752280"><input type="image" src="editsongrecord.jpg" width="16" height="16"></form></td><td><form action="" method="post"><input type="hidden" name="op" value="killrecord"><input type="hidden" name="id" value="752280"><input type="image" src="killrecord.jpg" width="16" height="16"></form></td></tr></tbody></table>
+</td><td class="resultlist"></td><td class="resultlist"></td><td class="resultlist"></td><td class="resultlist">2013-11-15 20:10:11</td><td class="resultlist">Whiskey FOlk Ramblers</td><td class="resultlist">Oh St. Jude</td><td class="resultlist">The Lonesome Undergroun </td><td class="resultlist">Ravenkaw</td><td class="resultlist">Folk/Country</td></tr><tr><td height="16" valign="middle" class="resultlist"><table border="0" cellspacing="0" cellpadding="0"><tbody><tr><td><form action="" method="post"><input type="hidden" name="op" value="editsongrecord"><input type="hidden" name="id" value="752281"><input type="image" src="editsongrecord.jpg" width="16" height="16"></form></td><td><form action="" method="post"><input type="hidden" name="op" value="killrecord"><input type="hidden" name="id" value="752281"><input type="image" src="killrecord.jpg" width="16" height="16"></form></td></tr></tbody></table>
+</td><td class="resultlist"></td><td class="resultlist"></td><td class="resultlist"></td><td class="resultlist">2013-11-15 20:14:05</td><td class="resultlist">Shovels and Rope</td><td class="resultlist">The Fall of Charleston</td><td class="resultlist">Divided &amp; United: Songs of the Civil War </td><td class="resultlist">ATO Records</td><td class="resultlist">Folk/Country</td></tr><tr><td height="16" valign="middle" class="resultlist"><table border="0" cellspacing="0" cellpadding="0"><tbody><tr><td><form action="" method="post"><input type="hidden" name="op" value="editsongrecord"><input type="hidden" name="id" value="752282"><input type="image" src="editsongrecord.jpg" width="16" height="16"></form></td><td><form action="" method="post"><input type="hidden" name="op" value="killrecord"><input type="hidden" name="id" value="752282"><input type="image" src="killrecord.jpg" width="16" height="16"></form></td></tr></tbody></table>
+</td><td class="resultlist"></td><td class="resultlist"></td><td class="resultlist"></td><td class="resultlist">2013-11-15 20:15:27</td><td class="resultlist">Lydia Loveless </td><td class="resultlist">All I Know </td><td class="resultlist">Boy Crazy</td><td class="resultlist">Bloodshot</td><td class="resultlist">Folk/Country</td></tr><tr><td height="16" valign="middle" class="resultlist"><table border="0" cellspacing="0" cellpadding="0"><tbody><tr><td><form action="" method="post"><input type="hidden" name="op" value="editsongrecord"><input type="hidden" name="id" value="752284"><input type="image" src="editsongrecord.jpg" width="16" height="16"></form></td><td><form action="" method="post"><input type="hidden" name="op" value="killrecord"><input type="hidden" name="id" value="752284"><input type="image" src="killrecord.jpg" width="16" height="16"></form></td></tr></tbody></table>
+</td><td class="resultlist"></td><td class="resultlist"></td><td class="resultlist"></td><td class="resultlist">2013-11-15 20:21:41</td><td class="resultlist">Lucero</td><td class="resultlist">The Closer You Get</td><td class="resultlist">High Cotton: A Tribute to Alabama</td><td class="resultlist">Lightning Rod Records</td><td class="resultlist">Folk/Country</td></tr><tr><td height="16" valign="middle" class="resultlist"><table border="0" cellspacing="0" cellpadding="0"><tbody><tr><td><form action="" method="post"><input type="hidden" name="op" value="editsongrecord"><input type="hidden" name="id" value="752285"><input type="image" src="editsongrecord.jpg" width="16" height="16"></form></td><td><form action="" method="post"><input type="hidden" name="op" value="killrecord"><input type="hidden" name="id" value="752285"><input type="image" src="killrecord.jpg" width="16" height="16"></form></td></tr></tbody></table>
+</td><td class="resultlist"></td><td class="resultlist"></td><td class="resultlist"></td><td class="resultlist">2013-11-15 20:27:44</td><td class="resultlist">lefty frizzel</td><td class="resultlist">sick sober and sorry</td><td class="resultlist">look what thoughts can do</td><td class="resultlist">Legacy</td><td class="resultlist">Folk/Country</td></tr><tr><td height="16" valign="middle" class="resultlist"><table border="0" cellspacing="0" cellpadding="0"><tbody><tr><td><form action="" method="post"><input type="hidden" name="op" value="editsongrecord"><input type="hidden" name="id" value="752286"><input type="image" src="editsongrecord.jpg" width="16" height="16"></form></td><td><form action="" method="post"><input type="hidden" name="op" value="killrecord"><input type="hidden" name="id" value="752286"><input type="image" src="killrecord.jpg" width="16" height="16"></form></td></tr></tbody></table>
+</td><td class="resultlist"></td><td class="resultlist"></td><td class="resultlist"></td><td class="resultlist">2013-11-15 20:28:03</td><td class="resultlist">Jerry Reed</td><td class="resultlist">Let's Sing Our Song</td><td class="resultlist">The Essential Jerry Reed</td><td class="resultlist">RCA Records</td><td class="resultlist">Folk/Country</td></tr><tr><td height="16" valign="middle" class="resultlist"><table border="0" cellspacing="0" cellpadding="0"><tbody><tr><td><form action="" method="post"><input type="hidden" name="op" value="editsongrecord"><input type="hidden" name="id" value="752288"><input type="image" src="editsongrecord.jpg" width="16" height="16"></form></td><td><form action="" method="post"><input type="hidden" name="op" value="killrecord"><input type="hidden" name="id" value="752288"><input type="image" src="killrecord.jpg" width="16" height="16"></form></td></tr></tbody></table>
+</td><td class="resultlist"></td><td class="resultlist"></td><td class="resultlist"></td><td class="resultlist">2013-11-15 20:31:05</td><td class="resultlist">Tammy Wynette and George Jones</td><td class="resultlist">Golden Ring- Single</td><td class="resultlist">Golden Ring-Single </td><td class="resultlist">Epic Records</td><td class="resultlist">Folk/Country</td></tr><tr><td height="16" valign="middle" class="resultlist"><table border="0" cellspacing="0" cellpadding="0"><tbody><tr><td><form action="" method="post"><input type="hidden" name="op" value="editsongrecord"><input type="hidden" name="id" value="752289"><input type="image" src="editsongrecord.jpg" width="16" height="16"></form></td><td><form action="" method="post"><input type="hidden" name="op" value="killrecord"><input type="hidden" name="id" value="752289"><input type="image" src="killrecord.jpg" width="16" height="16"></form></td></tr></tbody></table>
+</td><td class="resultlist"></td><td class="resultlist"></td><td class="resultlist"></td><td class="resultlist">2013-11-15 20:33:36</td><td class="resultlist">Roy Rogers</td><td class="resultlist">Red River Valley</td><td class="resultlist">Red River Valley- Single</td><td class="resultlist">n/a</td><td class="resultlist">Folk/Country</td></tr><tr><td height="16" valign="middle" class="resultlist"><table border="0" cellspacing="0" cellpadding="0"><tbody><tr><td><form action="" method="post"><input type="hidden" name="op" value="editsongrecord"><input type="hidden" name="id" value="752290"><input type="image" src="editsongrecord.jpg" width="16" height="16"></form></td><td><form action="" method="post"><input type="hidden" name="op" value="killrecord"><input type="hidden" name="id" value="752290"><input type="image" src="killrecord.jpg" width="16" height="16"></form></td></tr></tbody></table>
+</td><td class="resultlist"></td><td class="resultlist"></td><td class="resultlist"></td><td class="resultlist">2013-11-15 20:43:47</td><td class="resultlist">bob wills</td><td class="resultlist">Lyla Lou</td><td class="resultlist">Bob Wills </td><td class="resultlist">metro</td><td class="resultlist">Folk/Country</td></tr><tr><td height="16" valign="middle" class="resultlist"><table border="0" cellspacing="0" cellpadding="0"><tbody><tr><td><form action="" method="post"><input type="hidden" name="op" value="editsongrecord"><input type="hidden" name="id" value="752291"><input type="image" src="editsongrecord.jpg" width="16" height="16"></form></td><td><form action="" method="post"><input type="hidden" name="op" value="killrecord"><input type="hidden" name="id" value="752291"><input type="image" src="killrecord.jpg" width="16" height="16"></form></td></tr></tbody></table>
+</td><td class="resultlist"></td><td class="resultlist"></td><td class="resultlist"></td><td class="resultlist">2013-11-15 20:45:49</td><td class="resultlist">Amos lee</td><td class="resultlist">Loretta </td><td class="resultlist">Mountains of Sorrow, Rivers of Shame</td><td class="resultlist">blue note</td><td class="resultlist">Folk/Country</td></tr><tr><td height="16" valign="middle" class="resultlist"><table border="0" cellspacing="0" cellpadding="0"><tbody><tr><td><form action="" method="post"><input type="hidden" name="op" value="editsongrecord"><input type="hidden" name="id" value="752292"><input type="image" src="editsongrecord.jpg" width="16" height="16"></form></td><td><form action="" method="post"><input type="hidden" name="op" value="killrecord"><input type="hidden" name="id" value="752292"><input type="image" src="killrecord.jpg" width="16" height="16"></form></td></tr></tbody></table>
+</td><td class="resultlist"></td><td class="resultlist"></td><td class="resultlist"></td><td class="resultlist">2013-11-15 20:47:00</td><td class="resultlist">Townes Van Zandt</td><td class="resultlist">Loretta</td><td class="resultlist">Flyin Shoes</td><td class="resultlist">EMI</td><td class="resultlist">Folk/Country</td></tr><tr><td height="16" valign="middle" class="resultlist"><table border="0" cellspacing="0" cellpadding="0"><tbody><tr><td><form action="" method="post"><input type="hidden" name="op" value="editsongrecord"><input type="hidden" name="id" value="752293"><input type="image" src="editsongrecord.jpg" width="16" height="16"></form></td><td><form action="" method="post"><input type="hidden" name="op" value="killrecord"><input type="hidden" name="id" value="752293"><input type="image" src="killrecord.jpg" width="16" height="16"></form></td></tr></tbody></table>
+</td><td class="resultlist"></td><td class="resultlist"></td><td class="resultlist"></td><td class="resultlist">2013-11-15 20:51:32</td><td class="resultlist">Steep Canyon Rangers</td><td class="resultlist">Camellia</td><td class="resultlist">Tell The Ones I Love</td><td class="resultlist">Rounder</td><td class="resultlist">Folk/Country</td></tr><tr><td height="16" valign="middle" class="resultlist"><table border="0" cellspacing="0" cellpadding="0"><tbody><tr><td><form action="" method="post"><input type="hidden" name="op" value="editsongrecord"><input type="hidden" name="id" value="752294"><input type="image" src="editsongrecord.jpg" width="16" height="16"></form></td><td><form action="" method="post"><input type="hidden" name="op" value="killrecord"><input type="hidden" name="id" value="752294"><input type="image" src="killrecord.jpg" width="16" height="16"></form></td></tr></tbody></table>
+</td><td class="resultlist"></td><td class="resultlist"></td><td class="resultlist"></td><td class="resultlist">2013-11-15 20:51:33</td><td class="resultlist">Bob Schneider</td><td class="resultlist">Lorena</td><td class="resultlist">Songs Sung and Played at the Same Time</td><td class="resultlist">Shockogram</td><td class="resultlist">Folk/Country</td></tr><tr><td height="16" valign="middle" class="resultlist"><table border="0" cellspacing="0" cellpadding="0"><tbody><tr><td><form action="" method="post"><input type="hidden" name="op" value="editsongrecord"><input type="hidden" name="id" value="752295"><input type="image" src="editsongrecord.jpg" width="16" height="16"></form></td><td><form action="" method="post"><input type="hidden" name="op" value="killrecord"><input type="hidden" name="id" value="752295"><input type="image" src="killrecord.jpg" width="16" height="16"></form></td></tr></tbody></table>
+</td><td class="resultlist"></td><td class="resultlist"></td><td class="resultlist"></td><td class="resultlist">2013-11-15 20:54:56</td><td class="resultlist">Dolly Parton</td><td class="resultlist">Joshua</td><td class="resultlist">Essential Dolly Parton</td><td class="resultlist">RCA</td><td class="resultlist">Folk/Country</td></tr><tr><td height="16" valign="middle" class="resultlist"><table border="0" cellspacing="0" cellpadding="0"><tbody><tr><td><form action="" method="post"><input type="hidden" name="op" value="editsongrecord"><input type="hidden" name="id" value="752296"><input type="image" src="editsongrecord.jpg" width="16" height="16"></form></td><td><form action="" method="post"><input type="hidden" name="op" value="killrecord"><input type="hidden" name="id" value="752296"><input type="image" src="killrecord.jpg" width="16" height="16"></form></td></tr></tbody></table>
+</td><td class="resultlist"></td><td class="resultlist"></td><td class="resultlist"></td><td class="resultlist">2013-11-15 21:02:34</td><td class="resultlist">The Sheepdogs</td><td class="resultlist">Please Don't Lead Me On</td><td class="resultlist">LEarn &amp; Burn</td><td class="resultlist">The Sheepdogs</td><td class="resultlist">Folk/Country</td></tr><tr><td height="16" valign="middle" class="resultlist"><table border="0" cellspacing="0" cellpadding="0"><tbody><tr><td><form action="" method="post"><input type="hidden" name="op" value="editsongrecord"><input type="hidden" name="id" value="752297"><input type="image" src="editsongrecord.jpg" width="16" height="16"></form></td><td><form action="" method="post"><input type="hidden" name="op" value="killrecord"><input type="hidden" name="id" value="752297"><input type="image" src="killrecord.jpg" width="16" height="16"></form></td></tr></tbody></table>
+</td><td class="resultlist"></td><td class="resultlist"></td><td class="resultlist"></td><td class="resultlist">2013-11-15 21:03:47</td><td class="resultlist">Dale Earnhardt Jr. Jr.</td><td class="resultlist">Simple Girl</td><td class="resultlist">It's a Corporate World</td><td class="resultlist">Sheepdogs</td><td class="resultlist">Folk/Country</td></tr><tr><td height="16" valign="middle" class="resultlist"><table border="0" cellspacing="0" cellpadding="0"><tbody><tr><td><form action="" method="post"><input type="hidden" name="op" value="editsongrecord"><input type="hidden" name="id" value="752299"><input type="image" src="editsongrecord.jpg" width="16" height="16"></form></td><td><form action="" method="post"><input type="hidden" name="op" value="killrecord"><input type="hidden" name="id" value="752299"><input type="image" src="killrecord.jpg" width="16" height="16"></form></td></tr></tbody></table>
+</td><td class="resultlist"></td><td class="resultlist"></td><td class="resultlist"></td><td class="resultlist">2013-11-15 21:06:37</td><td class="resultlist">Dawes</td><td class="resultlist">Take Me Out to the City</td><td class="resultlist">North Hills</td><td class="resultlist">ATO</td><td class="resultlist">Folk/Country</td></tr><tr><td height="16" valign="middle" class="resultlist"><table border="0" cellspacing="0" cellpadding="0"><tbody><tr><td><form action="" method="post"><input type="hidden" name="op" value="editsongrecord"><input type="hidden" name="id" value="752300"><input type="image" src="editsongrecord.jpg" width="16" height="16"></form></td><td><form action="" method="post"><input type="hidden" name="op" value="killrecord"><input type="hidden" name="id" value="752300"><input type="image" src="killrecord.jpg" width="16" height="16"></form></td></tr></tbody></table>
+</td><td class="resultlist"></td><td class="resultlist"></td><td class="resultlist"></td><td class="resultlist">2013-11-15 21:11:11</td><td class="resultlist">Pickwick</td><td class="resultlist">Well, Well</td><td class="resultlist">Can't Talk Medicine</td><td class="resultlist">Dine Alone Music</td><td class="resultlist">Folk/Country</td></tr><tr><td height="16" valign="middle" class="resultlist"><table border="0" cellspacing="0" cellpadding="0"><tbody><tr><td><form action="" method="post"><input type="hidden" name="op" value="editsongrecord"><input type="hidden" name="id" value="752301"><input type="image" src="editsongrecord.jpg" width="16" height="16"></form></td><td><form action="" method="post"><input type="hidden" name="op" value="killrecord"><input type="hidden" name="id" value="752301"><input type="image" src="killrecord.jpg" width="16" height="16"></form></td></tr></tbody></table>
+</td><td class="resultlist"></td><td class="resultlist"></td><td class="resultlist"></td><td class="resultlist">2013-11-15 21:13:35</td><td class="resultlist">Swear and Shake</td><td class="resultlist">Johnnie</td><td class="resultlist">Extended Play</td><td class="resultlist">self released</td><td class="resultlist">Folk/Country</td></tr><tr><td height="16" valign="middle" class="resultlist"><table border="0" cellspacing="0" cellpadding="0"><tbody><tr><td><form action="" method="post"><input type="hidden" name="op" value="editsongrecord"><input type="hidden" name="id" value="752302"><input type="image" src="editsongrecord.jpg" width="16" height="16"></form></td><td><form action="" method="post"><input type="hidden" name="op" value="killrecord"><input type="hidden" name="id" value="752302"><input type="image" src="killrecord.jpg" width="16" height="16"></form></td></tr></tbody></table>
+</td><td class="resultlist"></td><td class="resultlist"></td><td class="resultlist"></td><td class="resultlist">2013-11-15 21:19:10</td><td class="resultlist">Taj mahal</td><td class="resultlist">down by the riverside</td><td class="resultlist">divded and united: songs of the civil war</td><td class="resultlist">ATO</td><td class="resultlist">Folk/Country</td></tr><tr><td height="16" valign="middle" class="resultlist"><table border="0" cellspacing="0" cellpadding="0"><tbody><tr><td><form action="" method="post"><input type="hidden" name="op" value="editsongrecord"><input type="hidden" name="id" value="752303"><input type="image" src="editsongrecord.jpg" width="16" height="16"></form></td><td><form action="" method="post"><input type="hidden" name="op" value="killrecord"><input type="hidden" name="id" value="752303"><input type="image" src="killrecord.jpg" width="16" height="16"></form></td></tr></tbody></table>
+</td><td class="resultlist"></td><td class="resultlist">b25</td><td class="resultlist"></td><td class="resultlist">2013-11-15 21:22:08</td><td class="resultlist">jason Isbell</td><td class="resultlist">cover me up</td><td class="resultlist">southeastern</td><td class="resultlist">southeastern records</td><td class="resultlist">Folk/Country</td></tr><tr><td height="16" valign="middle" class="resultlist"><table border="0" cellspacing="0" cellpadding="0"><tbody><tr><td><form action="" method="post"><input type="hidden" name="op" value="editsongrecord"><input type="hidden" name="id" value="752308"><input type="image" src="editsongrecord.jpg" width="16" height="16"></form></td><td><form action="" method="post"><input type="hidden" name="op" value="killrecord"><input type="hidden" name="id" value="752308"><input type="image" src="killrecord.jpg" width="16" height="16"></form></td></tr></tbody></table>
+</td><td class="resultlist"></td><td class="resultlist">b99</td><td class="resultlist"></td><td class="resultlist">2013-11-15 21:28:14</td><td class="resultlist">nick and the ovorolls</td><td class="resultlist">half of two</td><td class="resultlist">telegraph taboo</td><td class="resultlist">self released</td><td class="resultlist">Folk/Country</td></tr><tr><td height="16" valign="middle" class="resultlist"><table border="0" cellspacing="0" cellpadding="0"><tbody><tr><td><form action="" method="post"><input type="hidden" name="op" value="editsongrecord"><input type="hidden" name="id" value="752309"><input type="image" src="editsongrecord.jpg" width="16" height="16"></form></td><td><form action="" method="post"><input type="hidden" name="op" value="killrecord"><input type="hidden" name="id" value="752309"><input type="image" src="killrecord.jpg" width="16" height="16"></form></td></tr></tbody></table>
+</td><td class="resultlist"></td><td class="resultlist">b70</td><td class="resultlist"></td><td class="resultlist">2013-11-15 21:33:17</td><td class="resultlist">jj grey and mofro</td><td class="resultlist">somebody else</td><td class="resultlist">this river</td><td class="resultlist">alligator</td><td class="resultlist">Folk/Country</td></tr><tr><td height="16" valign="middle" class="resultlist"><table border="0" cellspacing="0" cellpadding="0"><tbody><tr><td><form action="" method="post"><input type="hidden" name="op" value="editsongrecord"><input type="hidden" name="id" value="752310"><input type="image" src="editsongrecord.jpg" width="16" height="16"></form></td><td><form action="" method="post"><input type="hidden" name="op" value="killrecord"><input type="hidden" name="id" value="752310"><input type="image" src="killrecord.jpg" width="16" height="16"></form></td></tr></tbody></table>
+</td><td class="resultlist"></td><td class="resultlist">b2</td><td class="resultlist"></td><td class="resultlist">2013-11-15 21:36:57</td><td class="resultlist">roomful of blues</td><td class="resultlist">straight jaquet</td><td class="resultlist">45 live</td><td class="resultlist">alligator</td><td class="resultlist">Folk/Country</td></tr><tr><td height="16" valign="middle" class="resultlist"><table border="0" cellspacing="0" cellpadding="0"><tbody><tr><td><form action="" method="post"><input type="hidden" name="op" value="editsongrecord"><input type="hidden" name="id" value="752314"><input type="image" src="editsongrecord.jpg" width="16" height="16"></form></td><td><form action="" method="post"><input type="hidden" name="op" value="killrecord"><input type="hidden" name="id" value="752314"><input type="image" src="killrecord.jpg" width="16" height="16"></form></td></tr></tbody></table>
+</td><td class="resultlist"></td><td class="resultlist">b20</td><td class="resultlist"></td><td class="resultlist">2013-11-15 21:42:37</td><td class="resultlist">vulfpeck</td><td class="resultlist">wait for the moment</td><td class="resultlist">my first car</td><td class="resultlist">vulf records</td><td class="resultlist">Folk/Country</td></tr><tr><td height="16" valign="middle" class="resultlist"><table border="0" cellspacing="0" cellpadding="0"><tbody><tr><td><form action="" method="post"><input type="hidden" name="op" value="editsongrecord"><input type="hidden" name="id" value="752315"><input type="image" src="editsongrecord.jpg" width="16" height="16"></form></td><td><form action="" method="post"><input type="hidden" name="op" value="killrecord"><input type="hidden" name="id" value="752315"><input type="image" src="killrecord.jpg" width="16" height="16"></form></td></tr></tbody></table>
+</td><td class="resultlist"></td><td class="resultlist"></td><td class="resultlist"></td><td class="resultlist">2013-11-15 21:49:28</td><td class="resultlist">Hank Williams</td><td class="resultlist">Jesus Remembered Me</td><td class="resultlist">I Saw The Light</td><td class="resultlist">mercury</td><td class="resultlist">Folk/Country</td></tr><tr><td height="16" valign="middle" class="resultlist"><table border="0" cellspacing="0" cellpadding="0"><tbody><tr><td><form action="" method="post"><input type="hidden" name="op" value="editsongrecord"><input type="hidden" name="id" value="752316"><input type="image" src="editsongrecord.jpg" width="16" height="16"></form></td><td><form action="" method="post"><input type="hidden" name="op" value="killrecord"><input type="hidden" name="id" value="752316"><input type="image" src="killrecord.jpg" width="16" height="16"></form></td></tr></tbody></table>
+</td><td class="resultlist"></td><td class="resultlist"></td><td class="resultlist"></td><td class="resultlist">2013-11-15 21:52:00</td><td class="resultlist">johnny Cash</td><td class="resultlist">amen</td><td class="resultlist">orange blossom</td><td class="resultlist">columbia</td><td class="resultlist">Folk/Country</td></tr><tr><td height="16" valign="middle" class="resultlist"><table border="0" cellspacing="0" cellpadding="0"><tbody><tr><td><form action="" method="post"><input type="hidden" name="op" value="editsongrecord"><input type="hidden" name="id" value="752317"><input type="image" src="editsongrecord.jpg" width="16" height="16"></form></td><td><form action="" method="post"><input type="hidden" name="op" value="killrecord"><input type="hidden" name="id" value="752317"><input type="image" src="killrecord.jpg" width="16" height="16"></form></td></tr></tbody></table>
+</td><td class="resultlist"></td><td class="resultlist"></td><td class="resultlist"></td><td class="resultlist">2013-11-15 21:54:08</td><td class="resultlist">the carter family</td><td class="resultlist">can the cirlce be unbroken</td><td class="resultlist">can the circle be unbroken</td><td class="resultlist">primo records</td><td class="resultlist">Folk/Country</td></tr><tr><td height="16" valign="middle" class="resultlist"><table border="0" cellspacing="0" cellpadding="0"><tbody><tr><td><form action="" method="post"><input type="hidden" name="op" value="editsongrecord"><input type="hidden" name="id" value="752319"><input type="image" src="editsongrecord.jpg" width="16" height="16"></form></td><td><form action="" method="post"><input type="hidden" name="op" value="killrecord"><input type="hidden" name="id" value="752319"><input type="image" src="killrecord.jpg" width="16" height="16"></form></td></tr></tbody></table>
+</td><td class="resultlist"></td><td class="resultlist"></td><td class="resultlist"></td><td class="resultlist">2013-11-15 21:58:11</td><td class="resultlist">The Honeytrees</td><td class="resultlist">Moon River</td><td class="resultlist">n/a</td><td class="resultlist">self released single</td><td class="resultlist">Folk/Country</td></tr><tr><td colspan="10" class="resultlist">Number of rows: <b>29</b></td></tr></tbody></table></td></tr></tbody></table></td></tr></tbody></table>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+<hr>
+<font size="-1">Problems? Questions? Comments? Email 
+tech@kwur.com
+<font color="#eeeeee"><br>The KWUR Playlist Tracker: originally by Tom Joseph &lt;tom@alum.wustl.edu&gt;, extended by Ben Oberkfeld, connected to Unicron by Kevin Croker &lt;kcroker@gmail.com&gt;</font>
+</font>
+<br>KWUR. Second only to omnipotence.
 
-			<tr>
-				<td>Marigold</td>
-				<td>J. Roddy Walston & The Business</td>
-				<td>Essential Trimmers</td>
-				<td>ATO Records</td></tr>
-
-			<tr>
-				<td>Hey Joseph</td>
-				<td>Mikhael Paskalev</td>
-				<td>Obsenic Sessions</td>
-				<td>s/r</td></tr>
-
-			<tr>
-				<td>If Only As A Ghost</td>
-				<td>Jonas Alaska</td>
-				<td>Jonas Alaska</td>
-				<td>Sony Music</td></tr>
-
-			<tr>
-				<td>Spanderer</td>
-				<td>Billie Van</td>
-				<td>P3 Radio Sessions</td>
-				<td>P3 Radio</td></tr>
-
-			<tr>
-				<td>Mighty Oaks</td>
-				<td>Just One Day</td>
-				<td>Cardinal Sessions</td>
-				<td>s/r</td></tr>
-
-			<tr>
-				<td>We Belong Together</td>
-				<td>OK Sweetheart</td>
-				<td>Eratosethenes Sessions</td>
-				<td>s/r</td></tr>
-
-			<tr>
-				<td>The Cross That I Wear</td>
-				<td>Sam Lewis</td>
-				<td>A Southern Greek Tragedy</td>
-				<td>s/r</td></tr>
-
-			<tr>
-				<td>Leave Chattanooga</td>
-				<td>Wrinkle Neck Mules</td>
-				<td>Apprentice To Ghosts</td>
-				<td>Lower 40 Records</td></tr>
-
-			<tr>
-				<td>Dallas</td>
-				<td>The O's</td>
-				<td>Thunder Dog</td>
-				<td>Punch Five</td></tr>
-
-			<tr>
-				<td>Wishing Well</td>
-				<td>Vetiver</td>
-				<td>American Songwriter Sessions</td>
-				<td>American Songwriter</td></tr>
-
-			<tr>
-				<td>Songs That She Sang In The Shower</td>
-				<td>Jason Isbell</td>
-				<td>Southeastern</td>
-				<td>Southeastern Records</td></tr>
-
-			<tr>
-				<td>I'll Show Me</td>
-				<td>Guy Clark</td>
-				<td>My Favorite Picture of You</td>
-				<td>Dualtone Records</td></tr>
-
-			<tr>
-				<td>Mississippi Mud</td>
-				<td>James Cotton</td>
-				<td>Cotton Mouth Man</td>
-				<td>Alligator</td></tr>
-
-			<tr>
-				<td>Some Place</td>
-				<td>Nick Waterhouse</td>
-				<td>Yours Truly Sessions</td>
-				<td>Yours Truly</td></tr>
-
-			<tr>
-				<td>What Else Can I Do</td>
-				<td>Kat Edmonson</td>
-				<td>Way Down Low</td>
-				<td>Spinnerette Records</td></tr>
-
-			<tr>
-				<td>Leading Me Now</td>
-				<td>The Tallest Man On Earth</td>
-				<td>There's No Leaving Now</td>
-				<td>Dead Ocean Records</td></tr>
-
-			<tr>
-				<td>New York</td>
-				<td>The Milk Carton Kids</td>
-				<td>Prologue</td>
-				<td>s/r</td></tr>
-
-			<tr>
-				<td>Byegone</td>
-				<td>Volcano Choir</td>
-				<td>Repave</td>
-				<td>Jagjaguwar</td></tr>
-
-			<tr>
-				<td>Laura Palmer</td>
-				<td>Bastille</td>
-				<td>Bad Blood</td>
-				<td>Virgin Records</td></tr>
-
-			<tr>
-				<td>Open</td>
-				<td>Rhye</td>
-				<td>Woman</td>
-				<td>Polydor Records</td></tr>
-
-			<tr>
-				<td>Louisiana Woman, Mississippi Man</td>
-				<td>Connie Twitty</td>
-				<td>20th Century Masters</td>
-				<td>MCA Nashville</td></tr>
-
-			<tr>
-				<td>Tennessee Waltz</td>
-				<td>Alma Cogan</td>
-				<td>Celebreation</td>
-				<td>EMI Records</td></tr>
-
-			<tr>
-				<td>How Much I've Lied</td>
-				<td>Gram Parsons</td>
-				<td>GP</td>
-				<td>Mobile Fidelity Sound Lab</td></tr>
-
-			<tr>
-				<td>Little Mama</td>
-				<td>Ray Wylie Hubbard</td>
-				<td>Growl</td>
-				<td>Concord Music Group</td></tr>
-
-			<tr>
-				<td>Birmingham</td>
-				<td>Shovels & Rope</td>
-				<td>O' Be Joyful</td>
-				<td>Dualtone</td></tr>
-
-		</table>
-	</body>
-</html>
+</body></html>
